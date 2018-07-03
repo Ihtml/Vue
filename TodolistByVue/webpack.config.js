@@ -15,7 +15,33 @@ module.exports = {
 			{
 				test: /\.vue$/,
 				loader: 'vue-loader'
-			}
+			},
+			//使css以一段js代码出现，并写入到HTML中
+			{
+				test: /\.css$/,
+				use: [
+					'style-loader',
+					'css-loader'
+				]
+			},
+			{
+				test: /\.styl$/,
+				use: [
+					'style-loader',
+					'css-loader',
+					'stylus-loader'
+				]
+			},
+			{
+				test: /\.(gif|jpg|jpeg|png|svg)$/,
+				use: [{
+					loader: 'url-loader',
+					options: {
+						limit: 1024,
+						name: '[name]-atest.[ext]'
+					}
+				}]
+			},
 		]
 	}
 }

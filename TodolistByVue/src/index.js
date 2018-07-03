@@ -1,6 +1,10 @@
 import Vue from 'Vue'
 import App from './app.vue'
 
+import './assets/styles/test.css'
+import './assets/styles/test-stylus.styl'
+import './assets/images/background-image.jpg'
+
 //创造一个节点
 const Root = document.createElement('div')
 document.body.appendChildTo(Root)
