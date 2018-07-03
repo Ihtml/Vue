@@ -8,7 +8,7 @@
 </template>
 
 <script>
-	// 这个.vue组件不能直接在浏览器中运行
+	// 这个.vue组件不能直接挂载到HTML上在浏览器中运行
 	import Header from './todo/header.vue'
 	import Todo from './todo/todo.vue'
 	import Footer from './todo/footer.jsx'
