@@ -46,8 +46,9 @@ const Config = {
 				use: [{
 					loader: 'url-loader',
 					options: {
+						// 图片小于1kb时直接转化为base64
 						limit: 1024,
-						name: '[name]-atest.[ext]'
+						name: '[name]-test.[ext]'
 					}
 				}]
 			},
@@ -68,6 +69,7 @@ if (IsDev) {
 	Config.devtool = '#cheap-module-eval-source-map'
 	Config.devServer = {
 		port: 8000,
+		//可以通过localhost和127.0.0.1访问，别的电脑也可以通过本机的内网IP访问
 		host: '0.0.0.0',
 		//直接在页面上显示错误信息
 		overlay:{
@@ -79,7 +81,9 @@ if (IsDev) {
 		hot: true,
 	}
 	Config.plugins.push(
+		// 会在运行过程中替换、添加或删除模块，而无需重新加载整个页面
 		new Webpack.HotModuleReplacementPlugin(),
+		// 确保输出资源不会包含错误
 		new Webpack.NoEmitOnErrorsPlugin()
 		)
 }
