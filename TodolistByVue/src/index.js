@@ -1,6 +1,6 @@
 import Vue from 'Vue'
 import App from './app.vue'
-
+// 引入全局样式
 import './assets/styles/global.styl'
 
 //创造一个节点

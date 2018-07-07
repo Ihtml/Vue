@@ -6,6 +6,9 @@ const Webpack = require('webpack')
 const IsDev = process.env.NODE_ENV === 'development'
 const HTMLPlugin = require('html-webpack-plugin')
 
+//把非js的的代码打包成一个静态资源文件
+const ExtractPlugin = require('extract-text-webpack-plugin')
+
 const Config = {
     target: 'web',
     //__dirname代表当前根目录名
@@ -26,13 +29,13 @@ const Config = {
                 loader: 'babel-loader'
             },
             //使css以一段js代码出现，并写入到HTML中
-            {
-                test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader'
-                ]
-            },
+            // {
+            //     test: /\.css$/,
+            //     use: [
+            //         'style-loader',
+            //         'css-loader'
+            //     ]
+            // },
             {
                 test: /\.styl$/,
                 use: [
