@@ -38,14 +38,6 @@ const Config = {
             //     ]
             // },
             {
-                test: /\.styl$/,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    'stylus-loader'
-                ]
-            },
-            {
                 test: /\.(gif|jpg|jpeg|png|svg)$/,
                 use: [{
                     loader: 'url-loader',
@@ -69,9 +61,8 @@ const Config = {
         new HTMLPlugin(),
     ],
 }
-
 if (IsDev) {
-    config.module.rules.push({
+    Config.module.rules.push({
         test: /\.styl/,
         use: [
             'style-loader',
