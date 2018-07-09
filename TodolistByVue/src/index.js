@@ -1,10 +1,7 @@
 import Vue from 'Vue'
 import App from './app.vue'
-<<<<<<< HEAD
+
 //导入全局样式
-=======
-// 引入全局样式
->>>>>>> b4c14631f136d89c0149d7a74594d2b7bddd518d
 import './assets/styles/global.styl'
 
 //创造一个节点
