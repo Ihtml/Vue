@@ -4,7 +4,7 @@ const IsDev = process.env.NODE_ENV === 'development'
 
 const Config = {
     target: 'web',
-    entry: Path.join(__dirname, 'src/index.js'),
+    entry: Path.join(__dirname, '../src/index.js'),
     output: {
         filename: 'bundle.[hash:8].js',
         path: Path.join(__dirname, 'dist')
@@ -40,7 +40,7 @@ const Config = {
                     options: {
                         // 图片小于1kb时直接转化为base64写在js内容里面
                         limit: 1024,
-                        name: '[name]-test.[ext]'
+                        name: 'resources/[path][name].[hash:8].[ext]'
                     }
                 }]
             },
