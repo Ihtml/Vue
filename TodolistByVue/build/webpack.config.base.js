@@ -4,10 +4,10 @@ const IsDev = process.env.NODE_ENV === 'development'
 
 const Config = {
     target: 'web',
-    entry: Path.join(__dirname, '../src/index.js'),
+    entry: Path.join(__dirname, '../client/index.js'),
     output: {
         filename: 'bundle.[hash:8].js',
-        path: Path.join(__dirname, 'dist')
+        path: Path.join(__dirname, '../dist')
     },
     module:{
         rules:[
