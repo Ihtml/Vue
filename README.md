@@ -1,1 +1,1 @@
-# Vue
+# Vue 2.0 demos
