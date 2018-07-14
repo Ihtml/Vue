@@ -1,3 +1,3 @@
-##Todolist by Vue2 + webpack
-### ——npm i
-### ——npm run dev
+## Todolist by Vue2 + webpack
+### —npm i
+### —npm run dev
