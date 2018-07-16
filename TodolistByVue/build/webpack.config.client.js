@@ -15,12 +15,10 @@ const DefaultPlugins =[
           NODE_ENV: IsDev ? '"development"' : '"production"'
     }
     }),
-    new HTMLPlugin()
+    new HTMLPlugin({
+        template: Path.join(__dirname, 'template.html')
+    })
 ] 
-
-
-
-
 
 let config
 const devServer = {
