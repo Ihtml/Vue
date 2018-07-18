@@ -33,6 +33,10 @@ const devServer = {
         open: true,
         //不刷新页面
         hot: true,
+        //所有的页面刷新跳转将指向index.html
+        historyApiFallback: {
+            index: '/public/index.html'
+        }
 }
 
 

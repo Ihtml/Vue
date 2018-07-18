@@ -2,7 +2,11 @@
 	<div id="app">
 		<div id="cover"></div>
 		<Header></Header>
-		<Todo></Todo>
+		<!-- router-link相当于a标签 -->
+		<router-link to='/app'>app</router-link>
+		<router-link to='/login'>login</router-link>
+		<!-- <Todo></Todo> -->
+		<router-view/>
 		<Footer></Footer>
 	</div>
 </template>
