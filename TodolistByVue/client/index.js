@@ -10,7 +10,7 @@ import createRouter from './config/router'
 // document.body.appendChild(Root)
 
 Vue.use(VueRouter)//可以全局使用vue-router
-const router = createRouter()
+const router = createRouter()//路由关系
 
 let vm = new Vue({
 	router,

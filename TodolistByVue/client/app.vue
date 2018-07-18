@@ -3,9 +3,11 @@
 		<div id="cover"></div>
 		<Header></Header>
 		<!-- router-link相当于a标签 -->
-		<router-link to='/app'>app</router-link>
+    <!-- 使用：to使Vue去解析它而不是当成字符串来处理 -->
+		<router-link :to="{name: 'app'}">app</router-link>
 		<router-link to='/login'>login</router-link>
 		<!-- <Todo></Todo> -->
+    <!-- router-view是占位符,内容为路由component的内容 -->
 		<router-view/>
 		<Footer></Footer>
 	</div>
