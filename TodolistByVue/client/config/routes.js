@@ -26,7 +26,12 @@ export default [
 		// ]
 	},
 	{
-		path: '/login',
+		path: '/login/:id', // /app/xxx传参
+		props: true, //会把：id作为props传递到Login里面
+		// props: {
+		// 	id: '10001'
+		// },
+		// props: (route) => ({id:route.query.b}), //通过query传递
 		component: Login
 	}
 ]

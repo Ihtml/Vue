@@ -5,10 +5,13 @@
 		<!-- router-link相当于a标签 -->
     <!-- 使用：to使Vue去解析它而不是当成字符串来处理 -->
 		<router-link :to="{name: 'app'}">app</router-link>
-		<router-link to='/login'>login</router-link>
+		<router-link to='/login/user101'>login</router-link>
 		<!-- <Todo></Todo> -->
+		<!-- 加上过渡动画 -->
+		<transition name="fade">
     <!-- router-view是占位符,内容为路由component的内容 -->
 		<router-view/>
+		</transition>
 		<Footer></Footer>
 	</div>
 </template>
@@ -24,6 +27,9 @@
 			Header,
 			Todo,
 			Footer,
+		},
+		mounted () {
+			console.log(this.$route)
 		}
 	}
 </script>
