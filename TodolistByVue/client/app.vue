@@ -13,6 +13,8 @@
 		<router-view/>
 		</transition>
 		<Footer></Footer>
+		<!-- 多个路由 -->
+		<router-view name="a"/>
 	</div>
 </template>
 

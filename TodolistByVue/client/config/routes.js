@@ -32,6 +32,13 @@ export default [
 		// 	id: '10001'
 		// },
 		// props: (route) => ({id:route.query.b}), //通过query传递
-		component: Login
+		// component: Login
+		// 多个路由情况下用components
+		components: {
+			// 没名字的
+			default: Login,
+			// 有名字的
+			a: Todo
+		}
 	}
 ]
