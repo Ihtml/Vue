@@ -11,55 +11,55 @@ const HTMLPlugin = require('html-webpack-plugin')
 const ExtractPlugin = require('extract-text-webpack-plugin')
 
 const Config = {
-    target: 'web',
-    //__dirname代表当前根目录名
-    entry: Path.join(__dirname, 'src/index.js'),
-    output: {
-        filename: 'bundle.[hash:8].js',
-        path: Path.join(__dirname, 'dist')
-    },
+  target: 'web',
+  //__dirname代表当前根目录名
+  entry: Path.join(__dirname, 'src/index.js'),
+  output: {
+      filename: 'bundle.[hash:8].js',
+      path: Path.join(__dirname, 'dist')
+  },
 //webpack原生只支持ES5语法的js文件,需要使用loader帮它解释不支持的类型
-    module:{
-        rules:[
-            {
-                test: /\.vue$/,
-                loader: 'vue-loader'
-            },
-            {
-                test: /\.jsx$/,
-                loader: 'babel-loader'
-            },
-            //使css以一段js代码出现，并写入到HTML中
-            // {
-            //     test: /\.css$/,
-            //     use: [
-            //         'style-loader',
-            //         'css-loader'
-            //     ]
-            // },
-            {
-                test: /\.(gif|jpg|jpeg|png|svg)$/,
-                use: [{
-                    loader: 'url-loader',
-                    options: {
-                        // 图片小于1kb时直接转化为base64写在js内容里面
-                        limit: 1024,
-                        name: '[name]-test.[ext]'
-                    }
-                }]
-            },
-        ]
-    },
-    plugins:[
-        //使用Vue、React等框架的时候加上，根据不同的环境下载不同的源码
-        new Webpack.DefinePlugin({
-            //判断js运行在开发环境还是生产环境下
-            'process.env':{
-                NODE_ENV: IsDev ? '"development"' : '"production"'
-            }
-        }),
-        new HTMLPlugin(),
-    ],
+  module:{
+      rules:[
+          {
+              test: /\.vue$/,
+              loader: 'vue-loader'
+          },
+          {
+              test: /\.jsx$/,
+              loader: 'babel-loader'
+          },
+          //使css以一段js代码出现，并写入到HTML中
+          // {
+          //     test: /\.css$/,
+          //     use: [
+          //         'style-loader',
+          //         'css-loader'
+          //     ]
+          // },
+          {
+              test: /\.(gif|jpg|jpeg|png|svg)$/,
+              use: [{
+                  loader: 'url-loader',
+                  options: {
+                      // 图片小于1kb时直接转化为base64写在js内容里面
+                      limit: 1024,
+                      name: '[name]-test.[ext]'
+                  }
+              }]
+          },
+      ]
+  },
+  plugins:[
+      //使用Vue、React等框架的时候加上，根据不同的环境下载不同的源码
+      new Webpack.DefinePlugin({
+          //判断js运行在开发环境还是生产环境下
+          'process.env':{
+              NODE_ENV: IsDev ? '"development"' : '"production"'
+          }
+      }),
+      new HTMLPlugin(),
+  ],
 }
 if (IsDev) {
     Config.module.rules.push({
