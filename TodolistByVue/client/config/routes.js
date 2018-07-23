@@ -2,13 +2,20 @@
 import Todo from '../views/todo/todo.vue'
 import Login from '../views/login/login.vue'
 
-export default [
-	{	//默认路由
+export default [{ //默认路由
 		path: '/',
 		redirect: '/app'
 	},
 	{
 		path: '/app',
+		// path: '/app/:id', // /app/xxx传参
+		// props: true, // 会把：id作为props传递到todo里面去
+		// props: {
+		// 	id: '789' // 指定id值传进去
+		// },
+		// props: (route) => ({
+		// 	id: route.query.b
+		// }), //通过query传递
 		component: Todo,
 		//name跟path和component没有关系，根据它可以进行路由跳转
 		name: 'app',
@@ -18,20 +25,15 @@ export default [
 			description: 'a description'
 		},
 		//子路由,显示的内容根据Todo里的router-view做显示
-		// children:[
-		// 	{ //现在可以访问 /app/test
-		// 		path: 'test',
-		// 		component: Login
-		// 	}
-		// ]
+		// children: [{ //现在可以访问 /app/test
+		// 	path: 'test',
+		// 	component: Login,
+		// 	name: 'test1',
+		// }]
 	},
 	{
-		path: '/login/:id', // /app/xxx传参
-		props: true, //会把：id作为props传递到Login里面
-		// props: {
-		// 	id: '10001'
-		// },
-		// props: (route) => ({id:route.query.b}), //通过query传递
+		path: '/login',
+
 		// component: Login
 		// 多个路由情况下用components
 		components: {
@@ -39,6 +41,7 @@ export default [
 			default: Login,
 			// 有名字的
 			a: Todo
-		}
+		},
+		name: 'login',
 	}
 ]

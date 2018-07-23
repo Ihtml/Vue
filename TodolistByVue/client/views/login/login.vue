@@ -1,16 +1,11 @@
 <template>
-	<div>this is login page,this id: {{id}}</div>
+	<div>this is login page</div>
 </template>
 <script>
-	export default {
-		props: ['id'],
-		mounted () {
-			console.log(this.id)
-		},
-		data () {
-			return {
-
-			}
-		}
-	}
+export default {
+  mounted() {},
+  data() {
+    return {};
+  }
+};
 </script>
