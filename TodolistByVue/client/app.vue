@@ -11,12 +11,11 @@
         <!-- 加上过渡动画 -->
         <!-- router-view是占位符,内容为路由component的内容 -->
         <transition name="fade">
-        <router-view/>
+            <router-view/>
         </transition>
-
-        <Footer></Footer>
-        <!-- 多个路由 -->
+        <!-- 多个路由时 -->
         <!-- <router-view name="a"/> -->
+        <Footer></Footer>
     </div>
 </template>
 

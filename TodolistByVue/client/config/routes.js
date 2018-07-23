@@ -17,6 +17,13 @@ export default [{ //默认路由
 		// 	id: route.query.b
 		// }), //通过query传递
 		component: Todo,
+		// 多个路由情况下用components
+		// components: {
+		// 	// 没名字的
+		// 	default: Todo,
+		// 	// 有名字的
+		// 	a: Login,
+		// },
 		//name跟path和component没有关系，根据它可以进行路由跳转
 		name: 'app',
 		//meta保存路由里的信息,可以通过.meta获取
@@ -33,15 +40,11 @@ export default [{ //默认路由
 	},
 	{
 		path: '/login',
-
-		// component: Login
-		// 多个路由情况下用components
-		components: {
-			// 没名字的
-			default: Login,
-			// 有名字的
-			a: Todo
-		},
+		component: Login,
+		// components: {
+		// 	default: Login,
+		// 	a: Todo,
+		// },
 		name: 'login',
 	}
 ]
