@@ -1,6 +1,6 @@
 //单页面应用页面跳转不经过后端
-import Todo from '../views/todo/todo.vue'
-import Login from '../views/login/login.vue'
+// import Todo from '../views/todo/todo.vue'
+// import Login from '../views/login/login.vue'
 
 export default [{ //默认路由
 		path: '/',
@@ -16,7 +16,8 @@ export default [{ //默认路由
 		// props: (route) => ({
 		// 	id: route.query.b
 		// }), //通过query传递
-		component: Todo,
+		component: () =>
+			import ('../views/todo/todo.vue'), //异步加载,使首屏加载更快
 		// 多个路由情况下用components
 		// components: {
 		// 	// 没名字的
@@ -46,7 +47,8 @@ export default [{ //默认路由
 	},
 	{
 		path: '/login',
-		component: Login,
+		component: () =>
+			import ('../views/login/login.vue'), //异步路由，要进入这个组件时才会加载对应的js代码
 		// components: {
 		// 	default: Login,
 		// 	a: Todo,

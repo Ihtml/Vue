@@ -24,13 +24,13 @@
 <script>
 // 这个.vue组件不能直接挂载到HTML上在浏览器中运行
 import Header from "./layout/header.vue";
-import Todo from "./views/todo/todo.vue";
+// import Todo from "./views/todo/todo.vue";
 import Footer from "./layout/footer.jsx";
 
 export default {
   components: {
     Header,
-    Todo,
+    // Todo,
     Footer
   },
   mounted() {
