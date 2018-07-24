@@ -26,7 +26,7 @@
 
 <script>
 // 这个.vue组件不能直接挂载到HTML上在浏览器中运行
-import { mapState, mapGetters } from "vuex";
+import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
 import Header from "./layout/header.vue";
 // import Todo from "./views/todo/todo.vue";
 import Footer from "./layout/footer.jsx";
@@ -42,11 +42,32 @@ export default {
     console.log(this.$route);
     // 可以全局使用$store对象
     console.log(this.$store);
-    let i = 1;
-    setInterval(() => {
-      this.$store.commit("updateCount", i++);
-    }, 1000);
+    // dispatch用来触发action，类似commit用来触发mutation
+    // this.$store.dispatch("updateCountAsync", {
+    //   num: 5,
+    //   time: 2000
+    // });
+    // 简写
+    this.updateCountAsync({
+      num: 5,
+      time: 2000
+    });
+    // let i = 1;
+    // setInterval(() => {
+    //   this.$store.commit("updateCount", {
+    //     num: i++,
+    //     num2: 2
+    //   });
+    // }, 1000);
+    // // 简写
+    // setInterval(() => {
+    //   this.updateCount({
+    //     num: i++,
+    //     num2: 2
+    //   });
+    // }, 1000);
   },
+  // 获取数据
   computed: {
     ...mapState(["count"]), // ES7语法 使用对象展开运算符将getter混入computed对象中 需要安装babel-preset-stage支持
     // ...mapState({
@@ -62,6 +83,13 @@ export default {
     // fullName() {
     //   return this.$store.getters.fullName;
     // }
+  },
+  // 操作数据
+  methods: {
+    // 异步方法
+    ...mapActions(["updateCountAsync"]),
+    // 同步方法
+    ...mapMutations(["updateCount"])
   }
 };
 </script>
