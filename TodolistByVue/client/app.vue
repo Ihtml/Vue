@@ -3,6 +3,8 @@
         <div id="cover"></div>
         <Header></Header>
         <p>{{count}}</p>
+        <p>{{fullName}}</p>
+        <p>{{counter}}</p>
         <!-- router-link相当于a标签 -->
         <!-- 使用：to使Vue去解析它而不是当成字符串来处理 -->
         <router-link to="/app/233">app233</router-link>
@@ -24,6 +26,7 @@
 
 <script>
 // 这个.vue组件不能直接挂载到HTML上在浏览器中运行
+import { mapState, mapGetters } from "vuex";
 import Header from "./layout/header.vue";
 // import Todo from "./views/todo/todo.vue";
 import Footer from "./layout/footer.jsx";
@@ -45,9 +48,20 @@ export default {
     }, 1000);
   },
   computed: {
-    count() {
-      return this.$store.state.count;
-    }
+    ...mapState(["count"]), // ES7语法 使用对象展开运算符将getter混入computed对象中 需要安装babel-preset-stage支持
+    // ...mapState({
+    //   counter: "count" // 除了数组形式，也可以使用对象形式
+    // }),
+    ...mapState({
+      counter: state => state.count // 方法形式
+    }),
+    ...mapGetters(["fullName"])
+    // count() {
+    //   return this.$store.state.count;
+    // },
+    // fullName() {
+    //   return this.$store.getters.fullName;
+    // }
   }
 };
 </script>
