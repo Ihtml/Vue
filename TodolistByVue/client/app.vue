@@ -2,6 +2,7 @@
     <div id="app">
         <div id="cover"></div>
         <Header></Header>
+        <p>{{count}}</p>
         <!-- router-link相当于a标签 -->
         <!-- 使用：to使Vue去解析它而不是当成字符串来处理 -->
         <router-link to="/app/233">app233</router-link>
@@ -36,6 +37,17 @@ export default {
   mounted() {
     // 单页面应用公用一个路由
     console.log(this.$route);
+    // 可以全局使用$store对象
+    console.log(this.$store);
+    let i = 1;
+    setInterval(() => {
+      this.$store.commit("updateCount", i++);
+    }, 1000);
+  },
+  computed: {
+    count() {
+      return this.$store.state.count;
+    }
   }
 };
 </script>
