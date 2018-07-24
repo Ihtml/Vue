@@ -30,9 +30,30 @@ import Tabs from "./tabs.vue";
 let id = 0;
 
 export default {
-  props: ["id"],
+  beforeRouteEnter(to, from, next) {
+    // 组件内部钩子
+    console.log("before todo enter");
+    // next可以接收一个回调
+    next(vm => {
+      console.log("after todo enter vm.id is:", vm.id);
+    });
+  },
+  beforeRouteUpdate(to, form, next) {
+    // 路由更新，组件被复用时触发,并且不会触发组件的mounted
+    console.log("todo update");
+    next();
+  },
+  beforeRouteLeave(to, form, next) {
+    console.log("todo leave");
+    // 可以弹出确认框，用户确认离开再执行next
+    // if (global.confirm("are you sure?")) {
+    //   next();
+    // }
+    next();
+  },
+  props: ["id"], //路由参数作为props传递到组件
   mounted() {
-    console.log(this.id);
+    console.log("todo mounted");
   },
   data() {
     return {

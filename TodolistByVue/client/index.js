@@ -2,15 +2,16 @@ import Vue from 'Vue'
 import App from './app.vue'
 import VueRouter from 'vue-router'
 
-//导入全局样式
+// 导入全局样式
 import './assets/styles/global.styl'
 import createRouter from './config/router'
-//创造一个节点
+// 创造一个节点
 // const Root = document.createElement('div')
 // document.body.appendChild(Root)
 
 Vue.use(VueRouter) //可以全局使用vue-router
 const router = createRouter() //路由关系
+
 //导航守卫,每次路由跳转都会触发,全局钩子
 router.beforeEach((to, from, next) => {
 	console.log('before each invoked')

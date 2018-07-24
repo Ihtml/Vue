@@ -7,9 +7,9 @@ export default [{ //默认路由
 		redirect: '/app'
 	},
 	{
-		path: '/app',
-		// path: '/app/:id', // /app/xxx传参
-		// props: true, // 会把：id作为props传递到todo里面去
+		// path: '/app',
+		path: '/app/:id', // /app/xxx传参
+		props: true, // 会把：id作为props传递到todo里面去
 		// props: {
 		// 	id: '789' // 指定id值传进去
 		// },
@@ -37,6 +37,12 @@ export default [{ //默认路由
 		// 	component: Login,
 		// 	name: 'test1',
 		// }]
+		// 局部钩子
+		beforeEnter: (to, from, next) => {
+			// 进入路由前被调用
+			console.log('before app route enter')
+			next()
+		}
 	},
 	{
 		path: '/login',

@@ -4,7 +4,9 @@
         <Header></Header>
         <!-- router-link相当于a标签 -->
         <!-- 使用：to使Vue去解析它而不是当成字符串来处理 -->
-        <router-link to="/app">app</router-link>
+        <router-link to="/app/233">app233</router-link>
+        <!-- 路由参数 -->
+        <router-link to="/app/abc">appabc</router-link>
         <!-- <router-link :to="{name: 'test1'}">child</router-link> -->
         <router-link :to="{name: 'login'}">login</router-link>
 
