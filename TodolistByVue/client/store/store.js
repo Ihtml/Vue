@@ -6,7 +6,9 @@ import actions from './actions/actions'
 
 const IsDev = process.env.NODE_ENV === 'development'
 export default () => { // 每次新生成一个store而不是共同一个store
-	return new Vuex.Store({
+	// return new Vuex.Store({
+	//加入热重载功能,防止修改后刷新页面，导致之前的修改都没了
+	const store = new Vuex.Store({
 		// 初始状态
 		state: defaultState,
 		// 修改state(同步)
@@ -82,4 +84,30 @@ export default () => { // 每次新生成一个store而不是共同一个store
 		// 设置无法从外部修改数据,仅适合在开发环境使用
 		strict: IsDev,
 	})
+
+	if (module.hot) {
+		module.hot.accept([
+			'./state/state',
+			'./mutations/mutations',
+			'./actions/actions',
+			'./getters/getters'
+		], () => {
+			// 获取更新后的模块
+			// 因为 babel 6 的模块编译格式问题，这里需要加上 `.default`
+			// 这里不能使用import因为import只能写在最外层，不能在业务代码的逻辑里去写import
+			const newState = require('./state/state').default
+			const newMutations = require('./mutations/mutations').default
+			const newActions = require('./actions/actions').default
+			const newGetters = require('./getters/getters').default
+			// 加载新模块
+			store.hotUpdate({
+				state: newState,
+				mutations: newMutations,
+				actions: newActions,
+				getters: newGetters,
+			})
+		})
+	}
+
+	return store
 }
