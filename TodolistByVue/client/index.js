@@ -24,6 +24,19 @@ store.registerModule('c', {
 		text: 3
 	}
 })
+//store.watch 接收两个参数，都是函数，第一个相当于getter,第二个相当于回调函数
+// store.watch((state) => state.count + 1, (newCount) => { //一旦state里count的值改变，回调函数就会被调用
+// 	console.log('new count watched:', newCount)
+// })
+// //订阅 每次mutation被调用 都会触发回调函数
+// store.subscribe((mutation, state) => {
+// 	console.log(mutation.type)
+// 	console.log(mutation.payload)
+// })
+// store.subscribeAction((action, state) => {
+// 	console.log(action.type)
+// 	console.log(action.payload)
+// })
 
 //导航守卫,每次路由跳转都会触发,全局钩子
 router.beforeEach((to, from, next) => {

@@ -17,6 +17,12 @@ export default () => { // 每次新生成一个store而不是共同一个store
 		actions,
 		// 获取数据
 		getters,
+		// 定义插件
+		plugins: [
+			(store) => {
+				console.log('my plugin invoked')
+			}
+		],
 		modules: {
 			a: {
 				state: {
