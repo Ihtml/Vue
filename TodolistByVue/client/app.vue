@@ -2,9 +2,13 @@
     <div id="app">
         <div id="cover"></div>
         <Header></Header>
-        <p>{{count}}</p>
-        <p>{{fullName}}</p>
-        <p>{{counter}}</p>
+        <p>count: {{count}}</p>
+        <p>fullName: {{fullName}}</p>
+        <p>counter: {{counter}}</p>
+        <p>textA: {{textA}}</p>
+        <p>textB: {{textB}}</p>
+        <p>textC: {{textC}}</p>
+        <p>textPlus: {{textPlus}}</p>
         <!-- router-link相当于a标签 -->
         <!-- 使用：to使Vue去解析它而不是当成字符串来处理 -->
         <router-link to="/app/233">app233</router-link>
@@ -42,6 +46,7 @@ export default {
     console.log(this.$route);
     // 可以全局使用$store对象
     console.log(this.$store);
+    console.log(this.textPlus);
     // dispatch用来触发action，类似commit用来触发mutation
     // this.$store.dispatch("updateCountAsync", {
     //   num: 5,
@@ -52,6 +57,10 @@ export default {
       num: 5,
       time: 2000
     });
+    this.updateTextA("newTextA");
+    this["b/updateTextB"]("newTextB");
+    this["b/add"]();
+    this.testB();
     // let i = 1;
     // setInterval(() => {
     //   this.$store.commit("updateCount", {
@@ -74,9 +83,16 @@ export default {
     //   counter: "count" // 除了数组形式，也可以使用对象形式
     // }),
     ...mapState({
-      counter: state => state.count // 方法形式
+      counter: state => state.count, // 方法形式
+      textA: state => state.a.text,
+      textB: state => state.b.text,
+      textC: state => state.c.text
     }),
-    ...mapGetters(["fullName"])
+    // ...mapGetters(["fullName", "b/textPlus"])
+    ...mapGetters({
+      fullName: "fullName",
+      textPlus: "b/textPlus"
+    })
     // count() {
     //   return this.$store.state.count;
     // },
@@ -87,9 +103,9 @@ export default {
   // 操作数据
   methods: {
     // 异步方法
-    ...mapActions(["updateCountAsync"]),
+    ...mapActions(["updateCountAsync", "b/add", "testB"]), //命名空间里的方法需要加上路径 /
     // 同步方法
-    ...mapMutations(["updateCount"])
+    ...mapMutations(["updateCount", "updateTextA", "b/updateTextB"])
   }
 };
 </script>

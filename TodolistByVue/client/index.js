@@ -9,7 +9,6 @@ import './assets/styles/global.styl'
 import createRouter from './config/router'
 import createStore from './store/store'
 
-
 // 创造一个节点
 // const Root = document.createElement('div')
 // document.body.appendChild(Root)
@@ -18,6 +17,13 @@ Vue.use(VueRouter) //可以全局使用vue-router
 Vue.use(Vuex)
 const router = createRouter() // 路由关系
 const store = createStore() // 状态
+
+//动态注册模块
+store.registerModule('c', {
+	state: {
+		text: 3
+	}
+})
 
 //导航守卫,每次路由跳转都会触发,全局钩子
 router.beforeEach((to, from, next) => {
