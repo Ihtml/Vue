@@ -73,7 +73,7 @@ if (IsDev) {
 	//正式环境
 	config = Merge(BaseConfig, {
 		entry: {
-			app: Path.join(__dirname, '../client/index.js'),
+			app: Path.join(__dirname, '../client/client-entry.js'),
 			//使浏览器尽可能长时间缓存框架代码,减少服务器流量,用户加载速度更快
 			vendor: ['vue'],
 		},

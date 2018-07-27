@@ -15,6 +15,8 @@ export default context => {
 			if (!matchedComponents.length) {
 				return reject(new Error('no component matched'))
 			}
+			// 拿到meta信息
+			context.meta = app.$meta()
 			resolve(app)
 		})
 	})
