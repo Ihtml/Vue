@@ -43,7 +43,7 @@ const handleSSR = async (ctx) => {
 	const clientManifestResp = await axios.get(
 		'http://127.0.0.1:8000/public/vue-ssr-client-manifest.json'
 	)
-	// 拿到返回的结果
+	// 拿到返回的结果 静态资源的地址
 	const clientManifest = clientManifestResp.data
 
 	// const serverBundle = bundle
