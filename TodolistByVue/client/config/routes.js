@@ -7,8 +7,8 @@ export default [{ //默认路由
 		redirect: '/app'
 	},
 	{
-		// path: '/app',
-		path: '/app/:id', // /app/xxx传参
+		path: '/app',
+		// path: '/app/:id', // /app/xxx传参
 		props: true, // 会把：id作为props传递到todo里面去
 		// props: {
 		// 	id: '789' // 指定id值传进去

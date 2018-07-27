@@ -7,7 +7,7 @@
         <p>counter: {{counter}}</p>
         <p>textA: {{textA}}</p>
         <p>textB: {{textB}}</p>
-        <p>textC: {{textC}}</p>
+        <!-- <p>textC: {{textC}}</p> -->
         <p>textPlus: {{textPlus}}</p>
         <!-- router-link相当于a标签 -->
         <!-- 使用：to使Vue去解析它而不是当成字符串来处理 -->
@@ -85,8 +85,8 @@ export default {
     ...mapState({
       counter: state => state.count, // 方法形式
       textA: state => state.a.text,
-      textB: state => state.b.text,
-      textC: state => state.c.text
+      textB: state => state.b.text
+      //   textC: state => state.c.text
     }),
     // ...mapGetters(["fullName", "b/textPlus"])
     ...mapGetters({
