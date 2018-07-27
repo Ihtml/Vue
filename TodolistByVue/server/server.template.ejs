@@ -11,8 +11,11 @@
 </head>
 
 <body>
-	<%- appString %>
-		<%- scripts %>
+	<!-- 客户端渲染需要root节点 -->
+	<div id="root">
+		<%- appString %>
+	</div>
+	<%- scripts %>
 </body>
 
 </html>
