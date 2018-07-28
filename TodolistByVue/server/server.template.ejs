@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Page Title</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<%- title %>
+		<!-- %代表不转义 -->
+		<%- style %>
 </head>
 
 <body>
-	<!-- ejs是一套模板语言，利用普通的JavaScript代码生成HTML页面 -->
+	<!-- 客户端渲染需要root节点 -->
+	<div id="root">
+		<%- appString %>
+	</div>
+	<%- scripts %>
 </body>
 
 </html>

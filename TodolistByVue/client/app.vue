@@ -7,11 +7,11 @@
         <p>counter: {{counter}}</p>
         <p>textA: {{textA}}</p>
         <p>textB: {{textB}}</p>
-        <p>textC: {{textC}}</p>
+        <!-- <p>textC: {{textC}}</p> -->
         <p>textPlus: {{textPlus}}</p>
         <!-- router-link相当于a标签 -->
         <!-- 使用：to使Vue去解析它而不是当成字符串来处理 -->
-        <router-link to="/app/233">app233</router-link>
+        <router-link to="/app">todoApp</router-link>
         <!-- 路由参数 -->
         <router-link to="/app/abc">appabc</router-link>
         <!-- <router-link :to="{name: 'test1'}">child</router-link> -->
@@ -36,6 +36,10 @@ import Header from "./layout/header.vue";
 import Footer from "./layout/footer.jsx";
 
 export default {
+  // 处理meta信息
+  metaInfo: {
+    title: "TodoList by Vue"
+  },
   components: {
     Header,
     // Todo,
@@ -85,8 +89,8 @@ export default {
     ...mapState({
       counter: state => state.count, // 方法形式
       textA: state => state.a.text,
-      textB: state => state.b.text,
-      textC: state => state.c.text
+      textB: state => state.b.text
+      //   textC: state => state.c.text
     }),
     // ...mapGetters(["fullName", "b/textPlus"])
     ...mapGetters({
@@ -113,21 +117,21 @@ export default {
 <!-- 加载组件时才会加载样式,节省流量 -->
 <style lang="stylus" scoped>
 #app {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 #cover {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #999;
-    opacity: 0.1;
-    z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #999;
+  opacity: 0.1;
+  z-index: -1;
 }
 </style>

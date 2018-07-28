@@ -3,6 +3,9 @@
 </template>
 <script>
 export default {
+  metaInfo: {
+    title: "Login Page"
+  },
   mounted() {},
   data() {
     return {};

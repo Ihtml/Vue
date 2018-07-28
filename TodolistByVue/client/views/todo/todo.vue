@@ -30,6 +30,10 @@ import Tabs from "./tabs.vue";
 let id = 0;
 
 export default {
+  // 渲染过程中 以下级组件的meta渲染上级组件的meta
+  metaInfo: {
+    title: "The Todo App"
+  },
   beforeRouteEnter(to, from, next) {
     // 组件内部钩子
     console.log("before todo enter");
