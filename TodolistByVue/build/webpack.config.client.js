@@ -31,6 +31,10 @@ const devServer = {
 	overlay: {
 		errors: true,
 	},
+	// 允许跨域
+	headers: {
+		'Access-Control-Allow-Origin': '*'
+	},
 	//自动打开页面
 	open: true,
 	//不刷新页面
