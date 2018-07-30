@@ -1,6 +1,9 @@
 <template>
 <transition name="fade">
-  <div class="notification">
+  <div 
+    class="notification"
+    :style='style'
+  >
     <span class="content">{{content}}</span>
     <a class="btn" @click="handleClose">{{btn}}</a>
   </div>
@@ -18,6 +21,11 @@ export default {
     btn: {
       type: String,
       default: "关闭"
+    }
+  },
+  computed: {
+    style() {
+      return {};
     }
   },
   methods: {

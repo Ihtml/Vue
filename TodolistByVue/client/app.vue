@@ -22,7 +22,8 @@
         <transition name="fade">
             <router-view/>
         </transition>
-        <notification content="test notify" />
+        <button @click="notify">click me</button>
+        <!-- <notification content="test notify" /> -->
         <!-- 多个路由时 -->
         <!-- <router-view name="a"/> -->
         <Footer></Footer>
@@ -47,6 +48,11 @@ export default {
     Footer
   },
   mounted() {
+    // console.log(this);
+    // this.$notify({
+    //   content: "test $notify",
+    //   btn: "close"
+    // });
     // 单页面应用公用一个路由
     console.log(this.$route);
     // 可以全局使用$store对象
@@ -58,10 +64,10 @@ export default {
     //   time: 2000
     // });
     // 简写
-    this.updateCountAsync({
-      num: 5,
-      time: 2000
-    });
+    // this.updateCountAsync({
+    //   num: 5,
+    //   time: 2000
+    // });
     this.updateTextA("newTextA");
     this["b/updateTextB"]("newTextB");
     this["b/add"]();
@@ -107,6 +113,12 @@ export default {
   },
   // 操作数据
   methods: {
+    notify() {
+      this.$notify({
+        content: "test $notify",
+        btn: "close"
+      });
+    },
     // 异步方法
     ...mapActions(["updateCountAsync", "b/add", "testB"]), //命名空间里的方法需要加上路径 /
     // 同步方法
