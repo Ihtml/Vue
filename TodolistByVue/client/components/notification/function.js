@@ -9,8 +9,17 @@ const instances = []
 const notify = (options) => {
 	if (Vue.prototype.$isServer) return
 
+	const {
+		autoClose,
+		...rest
+	} = options
 	const instance = new NotificationConstructor({
-		propsData: options
+		propsData: {
+			...rest
+		},
+		data: {
+			autoClose: autoClose === undefined ? 3000 : autoClose
+		}
 	})
 
 	const id = `notification_${seed++}`
@@ -18,6 +27,7 @@ const notify = (options) => {
 	// 只是生成了一个$el的对象，还没真正插入到DOM里面去
 	instance.vm = instance.$mount()
 	document.body.appendChild(instance.vm.$el)
+	instance.vm.visible = true
 
 	let verticalOffset = 0
 	instances.forEach(item => {
@@ -26,6 +36,10 @@ const notify = (options) => {
 	verticalOffset += 16
 	instance.verticalOffset = verticalOffset
 	instances.push(instance)
+
+	instance.vm.$on('close', () => {
+		instance.vm.visible = false
+	})
 	return instance.vm
 }
 

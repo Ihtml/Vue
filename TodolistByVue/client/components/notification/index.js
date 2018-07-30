@@ -1,4 +1,3 @@
-import Vue from 'vue'
 import Notification from './notification.vue'
 import notify from './function'
 
