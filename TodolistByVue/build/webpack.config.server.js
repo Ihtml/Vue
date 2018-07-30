@@ -8,7 +8,6 @@ const ExtractPlugin = require('extract-text-webpack-plugin')
 const BaseConfig = require('./webpack.config.base')
 const VueServerPlugin = require('vue-server-renderer/server-plugin')
 
-
 let config
 config = Merge(BaseConfig, {
 	// 打包出来的程序是在node端运行的

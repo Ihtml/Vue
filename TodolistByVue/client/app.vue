@@ -2,18 +2,18 @@
     <div id="app">
         <div id="cover"></div>
         <Header></Header>
-        <p>count: {{count}}</p>
+        <!-- <p>count: {{count}}</p>
         <p>fullName: {{fullName}}</p>
         <p>counter: {{counter}}</p>
         <p>textA: {{textA}}</p>
-        <p>textB: {{textB}}</p>
+        <p>textB: {{textB}}</p> -->
         <!-- <p>textC: {{textC}}</p> -->
-        <p>textPlus: {{textPlus}}</p>
+        <!-- <p>textPlus: {{textPlus}}</p> -->
         <!-- router-link相当于a标签 -->
         <!-- 使用：to使Vue去解析它而不是当成字符串来处理 -->
         <router-link to="/app">todoApp</router-link>
         <!-- 路由参数 -->
-        <router-link to="/app/abc">appabc</router-link>
+        <!-- <router-link to="/app/abc">appabc</router-link> -->
         <!-- <router-link :to="{name: 'test1'}">child</router-link> -->
         <router-link :to="{name: 'login'}">login</router-link>
 
@@ -22,6 +22,7 @@
         <transition name="fade">
             <router-view/>
         </transition>
+        <notification content="test notify" />
         <!-- 多个路由时 -->
         <!-- <router-view name="a"/> -->
         <Footer></Footer>
