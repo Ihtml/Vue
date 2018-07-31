@@ -1,6 +1,6 @@
 <template>
-<transition name="fade">
-  <div 
+<transition name="fade" @after-leave="afterLeave">
+  <div
     class="notification"
     :style='style'
     v-show="visible"
@@ -38,6 +38,9 @@ export default {
     handleClose(e) {
       e.preventDefault();
       this.$emit("close");
+    },
+    afterLeave() {
+      this.$emit("closed");
     }
   }
 };
