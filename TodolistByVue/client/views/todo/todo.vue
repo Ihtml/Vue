@@ -1,24 +1,31 @@
 <template>
 	<section class="real-app">
+    <div class="tab-container">
+      <tabs value="1">
+        <tab label="tab1" index="1" />
+        <tab index="2" ><span slot="label" style="color:red;">tab2 slot</span></tab>
+        <tab label="tab3" index="3" />
+      </tabs>
+    </div>
     <input
       type="text"
       class="add-input"
       autofocus="autofocus"
       placeholder="What do you want to do"
       @keyup.enter="addTodo"
-    > 
+    >
     <item
       v-for="todo in filteredTodos"
       :key="todo.id"
       :todo="todo"
       @del="deleteTodo"
     ></item>
-    <tabs
+    <helper
       :todos='todos'
       :filter='filter'
       @toggle='toggleFilter'
       @clearAllCompleted='clearAllCompleted'
-    ></tabs>
+    ></helper>
     <!-- 这里是todo的子路由 -->
     <!-- <router-view/> -->
   </section>
@@ -26,7 +33,7 @@
 
 <script>
 import Item from "./item.vue";
-import Tabs from "./tabs.vue";
+import Helper from "./tabs.vue";
 let id = 0;
 
 export default {
@@ -67,7 +74,7 @@ export default {
   },
   components: {
     Item,
-    Tabs
+    Helper
   },
   computed: {
     filteredTodos() {
@@ -126,5 +133,10 @@ export default {
   padding: 16px 16px 16px 60px;
   border: none;
   box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
+}
+
+.tab-container {
+  background-color: #fff;
+  padding: 0 15px;
 }
 </style>
