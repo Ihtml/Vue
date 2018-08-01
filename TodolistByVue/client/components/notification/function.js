@@ -42,7 +42,7 @@ const notify = (options) => {
   instance.vm = instance.$mount()
   document.body.appendChild(instance.vm.$el)
   instance.vm.visible = true
-
+  // 距离页面底部的高度
   let verticalOffset = 0
   instances.forEach(item => {
     verticalOffset += item.$el.offsetHeight + 16
@@ -54,7 +54,7 @@ const notify = (options) => {
   instance.vm.$on('closed', () => {
     removeInstance(instance)
     document.body.removeChild(instance.vm.$el)
-    instance.vm.$destory()
+    instance.vm.$destroy()
   })
   instance.vm.$on('close', () => {
     instance.vm.visible = false
