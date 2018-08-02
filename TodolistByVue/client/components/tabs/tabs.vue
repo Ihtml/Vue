@@ -1,12 +1,21 @@
 <script>
+import TabContainer from "./tab-container.vue";
 export default {
   name: "Tabs",
+  components: {
+    TabContainer
+  },
   props: {
     // 通过value控制显示哪个tab
     value: {
       type: [String, Number],
       required: true
     }
+  },
+  data() {
+    return {
+      panes: []
+    };
   },
   methods: {
     onChange(index) {
@@ -17,6 +26,7 @@ export default {
     return (
       <div class="tabs">
         <ul class="tabs-header">{this.$slots.default}</ul>
+        <tab-container panes={this.panes} />
       </div>
     );
   }

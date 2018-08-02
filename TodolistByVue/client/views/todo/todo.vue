@@ -1,10 +1,8 @@
 <template>
 	<section class="real-app">
     <div class="tab-container">
-      <tabs :value="tabValue" @change="handleChangeTab">
-        <tab label="tab1" index="1" />
-        <tab index="2" ><span slot="label" style="color:red;">tab2</span></tab>
-        <tab label="tab3" index="3" />
+      <tabs :value="filter" @change="handleChangeTab">
+        <tab :label="tab" :index="tab" v-for="tab in stats" :key="tab"></tab>
       </tabs>
     </div>
     <input
@@ -23,7 +21,6 @@
     <helper
       :todos='todos'
       :filter='filter'
-      @toggle='toggleFilter'
       @clearAllCompleted='clearAllCompleted'
     ></helper>
     <!-- 这里是todo的子路由 -->
@@ -33,7 +30,7 @@
 
 <script>
 import Item from "./item.vue";
-import Helper from "./tabs.vue";
+import Helper from "./helper.vue";
 let id = 0;
 
 export default {
@@ -70,7 +67,7 @@ export default {
     return {
       todos: [],
       filter: "all",
-      tabValue: 1
+      stats: ["all", "active", "completed"]
     };
   },
   components: {
@@ -105,7 +102,7 @@ export default {
       this.todos = this.todos.filter(todo => !todo.completed);
     },
     handleChangeTab(index) {
-      this.tabValue = index;
+      this.filter = index;
     }
   }
 };
