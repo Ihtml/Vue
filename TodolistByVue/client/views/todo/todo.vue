@@ -75,6 +75,7 @@ export default {
     Helper
   },
   computed: {
+    // 根据filter显示items的内容
     filteredTodos() {
       if (this.filter === "all") {
         return this.todos;
