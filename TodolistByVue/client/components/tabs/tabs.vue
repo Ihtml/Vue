@@ -8,6 +8,11 @@ export default {
       required: true
     }
   },
+  methods: {
+    onChange(index) {
+      this.$emit("change", index);
+    }
+  },
   render() {
     return (
       <div class="tabs">

@@ -12,8 +12,15 @@ export default {
     }
   },
   computed: {
+    // 当tabs的value等于tab的index，为选中状态
     active() {
-      return false;
+      return this.$parent.value === this.index;
+    }
+  },
+  methods: {
+    handleClick() {
+      // 触发父元素监听的事件，并把index传出去
+      this.$parent.onChange(this.index);
     }
   },
   render() {
@@ -22,7 +29,11 @@ export default {
       tab: true,
       active: this.active
     };
-    return <li class={classNames}>{tab}</li>;
+    return (
+      <li class={classNames} on-click={this.handleClick}>
+        {tab}
+      </li>
+    );
   }
 };
 </script>

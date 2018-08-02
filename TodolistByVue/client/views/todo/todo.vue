@@ -1,9 +1,9 @@
 <template>
 	<section class="real-app">
     <div class="tab-container">
-      <tabs value="1">
+      <tabs :value="tabValue" @change="handleChangeTab">
         <tab label="tab1" index="1" />
-        <tab index="2" ><span slot="label" style="color:red;">tab2 slot</span></tab>
+        <tab index="2" ><span slot="label" style="color:red;">tab2</span></tab>
         <tab label="tab3" index="3" />
       </tabs>
     </div>
@@ -69,7 +69,8 @@ export default {
   data() {
     return {
       todos: [],
-      filter: "all"
+      filter: "all",
+      tabValue: 1
     };
   },
   components: {
@@ -102,6 +103,9 @@ export default {
     },
     clearAllCompleted() {
       this.todos = this.todos.filter(todo => !todo.completed);
+    },
+    handleChangeTab(index) {
+      this.tabValue = index;
     }
   }
 };
