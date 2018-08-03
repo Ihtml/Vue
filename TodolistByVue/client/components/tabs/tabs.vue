@@ -2,6 +2,18 @@
 import TabContainer from "./tab-container.vue";
 export default {
   name: "Tabs",
+  // Vue对象初始化的过程中调用这个方法
+  // provide() {
+  // const data={}
+  // Object.defineProperty(data,'value',{
+  //  子组件调用value的时候，实际调用的是get方法，每次都会去获取最新的value
+  //   get:()=>this.value,
+  //   enumberable:true
+  // })
+  //   return {
+  //     data
+  //   };
+  // },
   components: {
     TabContainer
   },

@@ -1,6 +1,8 @@
 <script>
 export default {
   name: "Tab",
+  // 父组件提供provide，子组件注入，但不是响应式的
+  // inject: ["data"],
   props: {
     index: {
       type: [Number, String],
@@ -14,6 +16,7 @@ export default {
   computed: {
     // 当tabs的value等于tab的index，为选中状态
     active() {
+      // return data.value === this.index
       return this.$parent.value === this.index;
     }
   },
