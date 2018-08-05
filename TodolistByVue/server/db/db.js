@@ -1,3 +1,4 @@
+// 请求线上数据库的签名
 const sha1 = require('sha1')
 const axios = require('axios')
 
@@ -14,6 +15,11 @@ module.exports = (appId, appKey) => {
     return {
       'X-APICloud-AppId': appId,
       'X-APICloud-AppKey': `${sha1(`${appId}UZ${appKey}UZ${now}`)}.${now}`
+    }
+  }
+  return {
+    async getAllTodos () {
+      await request.get()
     }
   }
 }
