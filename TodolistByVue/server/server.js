@@ -4,7 +4,9 @@ const send = require('koa-send')
 const path = require('path')
 const staticRouter = require('./routers/static')
 const apiRouter = require('./routers/api')
+const userRouter = require('./routers/user')
 const koaBody = require('koa-body')
+const koaSession = require('koa-session')
 const app = new Koa()
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -12,6 +14,12 @@ const createDb = require('./db/db')
 const config = require('../app.config')
 const db = createDb(config.db.appId, config.db.appKey)
 
+app.keys = ['vue ssr login']
+app.use(koaSession({
+  key: 'v-ssr-id',
+  // 失效时间两小时
+  maxAge: 2 * 60 * 60 * 1000
+}, app))
 // 记录所有的请求和出现的错误，返回错误信息
 app.use(async (ctx, next) => {
   try {
@@ -52,6 +60,7 @@ if (isDev) {
 }
 
 app.use(koaBody())
+app.use(userRouter.routes()).use(userRouter.allowedMethods())
 app.use(apiRouter.routes()).use(apiRouter.allowedMethods())
 app.use(pageRouter.routes()).use(pageRouter.allowedMethods())
 const HOST = process.env.HOST || '0.0.0.0'
