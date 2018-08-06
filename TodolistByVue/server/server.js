@@ -4,6 +4,7 @@ const send = require('koa-send')
 const path = require('path')
 const staticRouter = require('./routers/static')
 const apiRouter = require('./routers/api')
+const koaBody = require('koa-body')
 const app = new Koa()
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -50,6 +51,7 @@ if (isDev) {
   pageRouter = require('./routers/ssr')
 }
 
+app.use(koaBody())
 app.use(apiRouter.routes()).use(apiRouter.allowedMethods())
 app.use(pageRouter.routes()).use(pageRouter.allowedMethods())
 const HOST = process.env.HOST || '0.0.0.0'
