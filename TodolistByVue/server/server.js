@@ -7,6 +7,10 @@ const apiRouter = require('./routers/api')
 const app = new Koa()
 const isDev = process.env.NODE_ENV === 'development'
 
+const createDb = require('./db/db')
+const config = require('../app.config')
+const db = createDb(config.db.appId, config.db.appKey)
+
 // 记录所有的请求和出现的错误，返回错误信息
 app.use(async (ctx, next) => {
   try {
@@ -21,6 +25,11 @@ app.use(async (ctx, next) => {
       ctx.body = 'please try agin later'
     }
   }
+})
+// 请求中间件
+app.use(async (ctx, next) => {
+  ctx.db = db
+  await next()
 })
 
 app.use(async (ctx, next) => {

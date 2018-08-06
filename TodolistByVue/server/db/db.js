@@ -8,6 +8,24 @@ const className = 'todo'
 const request = axios.create({
   baseURL: 'https://d.apicloud.com/mcm/api'
 })
+// 自定义错误信息
+const createError = (code, resp) => {
+  const err = new Error(resp.message)
+  err.code = code
+  return err
+}
+
+const handleRequest = ({
+  status,
+  data,
+  ...rest
+}) => {
+  if (status === 200) {
+    return data
+  } else {
+    throw createError(status, rest)
+  }
+}
 module.exports = (appId, appKey) => {
   // 每次请求线上数据库都要加上的请求头
   const getHeaders = () => {
@@ -18,8 +36,11 @@ module.exports = (appId, appKey) => {
     }
   }
   return {
-    async getAllTodos () {
-      await request.get()
+    async getAllTodos() {
+      // 拼接url,等待结果再执行handleRequest()方法
+      return handleRequest(await request.get(`/${className}`, {
+        headers: getHeaders()
+      }))
     }
   }
 }
