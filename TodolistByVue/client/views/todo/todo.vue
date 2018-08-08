@@ -29,6 +29,7 @@
 </template>
 
 <script>
+import { mapState, mapActions } from "vuex";
 import Item from "./item.vue";
 import Helper from "./helper.vue";
 let id = 0;
@@ -62,10 +63,13 @@ export default {
   props: ["id"], //路由参数作为props传递到组件
   mounted() {
     console.log("todo mounted");
+    if (this.todos) {
+      this.fetchTodos();
+    }
   },
   data() {
     return {
-      todos: [],
+      // todos: [],
       filter: "all",
       stats: ["all", "active", "completed"]
     };
@@ -75,6 +79,7 @@ export default {
     Helper
   },
   computed: {
+    ...mapState(["todos"]),
     // 根据filter显示items的内容
     filteredTodos() {
       if (this.filter === "all") {
@@ -85,6 +90,7 @@ export default {
     }
   },
   methods: {
+    ...mapActions(["fetchTodos"]),
     addTodo(e) {
       this.todos.unshift({
         id: id++,

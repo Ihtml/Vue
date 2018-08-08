@@ -28,11 +28,11 @@ export default {
     }
   },
 
-  data() {
-    return {
-      states: ["all", "active", "completed"]
-    };
-  },
+  // data() {
+  //   return {
+  //     states: ["all", "active", "completed"]
+  //   };
+  // },
   //当数据变化时自动计算
   computed: {
     unFinishedTodoLength() {

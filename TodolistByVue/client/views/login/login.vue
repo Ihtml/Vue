@@ -39,7 +39,7 @@ export default {
     doSubmit(e) {
       e.preventDefault();
       if (this.validate()) {
-        // 调用接口
+        // 验证通过调用接口
         this.login({
           username: this.username,
           password: this.password
