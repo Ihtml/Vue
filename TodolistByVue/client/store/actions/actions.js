@@ -3,12 +3,14 @@
 
 import model from '../../model/client-model'
 import notify from '../../components/notification/function'
+import bus from '../../util/bus'
 
 const handleError = (err) => {
   if (err.code === 401) {
     notify({
       content: '要先登录哦'
     })
+    bus.$emit('auth')
   }
 }
 export default {
@@ -33,7 +35,7 @@ export default {
   },
   login({
     commit
-  }, {}) {
+  }, { }) {
     commit('')
     return new Promise(() => {
 
