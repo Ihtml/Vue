@@ -4,4 +4,5 @@ export default {
   firstName: 'Foo',
   lastName: 'Bar',
   todos: [],
+  user: null
 }
