@@ -22,12 +22,25 @@ export default {
       })
     }, data.time)
   },
+
   fetchTodos({
     commit
   }) {
     return model.getAllTodos()
       .then(data => {
         commit('fillTodos', data)
+      })
+      .catch(err => {
+        handleError(err)
+      })
+  },
+  addTodo({ commit }, todo) {
+    model.createTodo(todo)
+      .then(data => {
+        commit('addTodo', data)
+        notify({
+          content: '你又多了一件事要做'
+        })
       })
       .catch(err => {
         handleError(err)

@@ -10,7 +10,7 @@
       class="add-input"
       autofocus="autofocus"
       placeholder="What do you want to do"
-      @keyup.enter="addTodo"
+      @keyup.enter="handleAdd"
     >
     <item
       v-for="todo in filteredTodos"
@@ -90,13 +90,26 @@ export default {
     }
   },
   methods: {
-    ...mapActions(["fetchTodos"]),
-    addTodo(e) {
-      this.todos.unshift({
-        id: id++,
-        content: e.target.value.trim(),
+    ...mapActions([
+      "fetchTodos",
+      "addTodo",
+      "deleteTodo",
+      "updateTodo",
+      "deleteAllCompleted"
+    ]),
+    handleAdd(e) {
+      const content = e.target.value.trim();
+      if (!content) {
+        this.notify({
+          content: "请输入要做的内容"
+        });
+        return;
+      }
+      const todo = {
+        content,
         completed: false
-      });
+      };
+      this.addTodo(todo);
       e.target.value = "";
     },
     deleteTodo(id) {
@@ -106,6 +119,8 @@ export default {
       this.filter = state;
     },
     clearAllCompleted() {
+      console.log("清除已完成");
+      console.log(this.todos);
       this.todos = this.todos.filter(todo => !todo.completed);
     },
     handleChangeTab(index) {

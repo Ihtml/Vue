@@ -13,5 +13,8 @@ export default {
   },
   doLogin(state, userInfo) {
     state.user = userInfo
-  }
+  },
+  addTodo(state, todo) {
+    state.todos.unshift(todo)
+  },
 }

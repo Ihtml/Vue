@@ -35,4 +35,7 @@ export default {
   login(username, password) {
     return handleRequest(request.post('/user/login', { username, password }))
   },
+  createTodo(todo) {
+    return handleRequest(request.post('/api/todo', todo))
+  },
 }
