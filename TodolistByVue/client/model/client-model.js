@@ -38,4 +38,13 @@ export default {
   createTodo(todo) {
     return handleRequest(request.post('/api/todo', todo))
   },
+  deleteTodo(id) {
+    return handleRequest(request.delete(`/api/todo/${id}`))
+  },
+  deleteAllCompleted(ids) {
+    return handleRequest(request.post('/api/delete/completed', { ids }))
+  },
+  updateTodo(id, todo) {
+    return handleRequest(request.put(`/api/todo/${id}`, todo))
+  },
 }

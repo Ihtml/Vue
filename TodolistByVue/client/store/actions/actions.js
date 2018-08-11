@@ -46,6 +46,46 @@ export default {
         handleError(err)
       })
   },
+  updateTodo({ commit }, { id, todo }) {
+    // commit('startLoading')
+    model.updateTodo(id, todo)
+      .then(data => {
+        commit('updateTodo', { id, todo: data })
+        // commit('endLoading')
+      }).catch(err => {
+        handleError(err)
+        // commit('endLoading')
+      })
+  },
+  deleteTodo({ commit }, id) {
+    // commit('startLoading')
+    model.deleteTodo(id)
+      .then(data => {
+        commit('deleteTodo', id)
+        notify({
+          content: '你又少了一件事要做'
+        })
+        // commit('endLoading')
+      }).catch(err => {
+        handleError(err)
+        // commit('endLoading')
+      })
+  },
+  deleteAllCompleted({ commit, state }) {
+    // commit('startLoading')
+    const ids = state.todos.filter(t => t.completed).map(t => t.id)
+    model.deleteAllCompleted(ids)
+      .then(() => {
+        commit('deleteAllCompleted')
+        // commit('endLoading')
+        notify({
+          content: '清理一下~~~'
+        })
+      }).catch(err => {
+        handleError(err)
+        // commit('endLoading')
+      })
+  },
   login({
     commit
   }, { username, password }) {

@@ -17,6 +17,7 @@
       :key="todo.id"
       :todo="todo"
       @del="deleteTodo"
+      @toggle="toggleTodoState"
     ></item>
     <helper
       :todos='todos'
@@ -112,16 +113,23 @@ export default {
       this.addTodo(todo);
       e.target.value = "";
     },
-    deleteTodo(id) {
-      this.todos.splice(this.todos.findIndex(todo => todo.id === id), 1);
+    // deleteTodo(id) {
+    //   this.todos.splice(this.todos.findIndex(todo => todo.id === id), 1);
+    // },
+    toggleTodoState(todo) {
+      this.updateTodo({
+        id: todo.id,
+        todo: Object.assign({}, todo, {
+          completed: !todo.completed
+        })
+      });
     },
-    toggleFilter(state) {
-      this.filter = state;
-    },
+    // toggleFilter(state) {
+    //   this.filter = state;
+    // },
     clearAllCompleted() {
-      console.log("清除已完成");
-      console.log(this.todos);
-      this.todos = this.todos.filter(todo => !todo.completed);
+      this.deleteAllCompleted();
+      // this.todos = this.todos.filter(todo => !todo.completed);
     },
     handleChangeTab(index) {
       this.filter = index;
