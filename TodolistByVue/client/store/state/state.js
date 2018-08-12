@@ -3,5 +3,6 @@ export default {
   firstName: 'Foo',
   lastName: 'Bar',
   todos: [],
-  user: null
+  user: null,
+  loading: false
 }

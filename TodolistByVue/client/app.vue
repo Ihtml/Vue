@@ -1,6 +1,9 @@
 <template>
     <div id="app">
         <div id="cover"></div>
+        <div id="loading" v-show="loading">
+        <loading></loading>
+        </div>
         <Header></Header>
         <!-- <p>count: {{count}}</p>
         <p>fullName: {{fullName}}</p>
@@ -19,7 +22,7 @@
 
         <!-- 加上过渡动画 -->
         <!-- router-view是占位符,内容为路由component的内容 -->
-        <transition name="fade">
+        <transition name="fade" mode="out-in">
             <router-view/>
         </transition>
         <button @click="notify">click me</button>
@@ -36,6 +39,7 @@ import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
 import Header from "./layout/header.vue";
 // import Todo from "./views/todo/todo.vue";
 import Footer from "./layout/footer.jsx";
+import Loading from "./components/loading/loading.vue";
 
 export default {
   // 处理meta信息
@@ -45,7 +49,8 @@ export default {
   components: {
     Header,
     // Todo,
-    Footer
+    Footer,
+    Loading
   },
   mounted() {
     // console.log(this);
@@ -89,7 +94,7 @@ export default {
   },
   // 获取数据
   computed: {
-    ...mapState(["count"]), // ES7语法 使用对象展开运算符将getter混入computed对象中 需要安装babel-preset-stage支持
+    ...mapState(["count", "loading"]), // ES7语法 使用对象展开运算符将getter混入computed对象中 需要安装babel-preset-stage支持
     // ...mapState({
     //   counter: "count" // 除了数组形式，也可以使用对象形式
     // }),
@@ -146,5 +151,18 @@ export default {
   background-color: #999;
   opacity: 0.1;
   z-index: -1;
+}
+
+#loading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

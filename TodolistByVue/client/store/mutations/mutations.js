@@ -36,4 +36,10 @@ export default {
   addTodo(state, todo) {
     state.todos.unshift(todo)
   },
+  startLoading(state) {
+    state.loading = true
+  },
+  endLoading(state) {
+    state.loading = false
+  }
 }
