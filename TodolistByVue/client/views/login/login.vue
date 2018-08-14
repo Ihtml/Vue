@@ -86,7 +86,7 @@ export default {
   line-height: 30px;
   margin-bottom: 20px;
   border: 1px solid #aaa;
-  width: 328px;
+  width: 310px;
   border-radius: 0;
   box-shadow: 0 0 0;
 }

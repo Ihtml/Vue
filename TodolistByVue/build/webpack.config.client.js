@@ -124,7 +124,7 @@ if (IsDev) {
 config.resolve = {
   // alias的key是可以直接import的内容
   alias: {
-    'model': path.join(__dirname, '../client/model/client-model.js')
+    'model': Path.join(__dirname, '../client/model/client-model.js')
   }
 }
 

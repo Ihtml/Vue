@@ -64,9 +64,16 @@ export default {
   props: ["id"], //路由参数作为props传递到组件
   mounted() {
     console.log("todo mounted");
-    if (this.todos) {
+    if (this.todos && this.todos.length < 1) {
       this.fetchTodos();
     }
+  },
+  asyncData({ store, router }) {
+    if (store.state.user) {
+      return store.dispatch("fetchTodos");
+    }
+    router.replace("/login");
+    return Promise.resolve();
   },
   data() {
     return {
