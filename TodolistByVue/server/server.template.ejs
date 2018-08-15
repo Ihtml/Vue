@@ -2,20 +2,23 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<%- title %>
-		<!-- %代表不转义 -->
-		<%- style %>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%- title %>
+    <!-- %代表不转义 -->
+
+    <%- style %>
 </head>
 
 <body>
-	<!-- 客户端渲染需要root节点 -->
-	<div id="root">
-		<%- appString %>
-	</div>
-	<%- scripts %>
+  <!-- 客户端渲染需要root节点 -->
+  <div id="root">
+    <%- appString %>
+  </div>
+  <%- initalState %>
+
+    <%- scripts %>
 </body>
 
 </html>

@@ -21,6 +21,7 @@ const handleRequest = (request) => {
       resolve(data.data)
     }).catch(err => {
       const resp = err.response
+      console.log('---------------', resp)
       if (resp.status === 401) {
         reject(createError(401, 'need auth'))
       }
@@ -33,7 +34,10 @@ export default {
     return handleRequest(request.get('/api/todos'))
   },
   login(username, password) {
-    return handleRequest(request.post('/user/login', { username, password }))
+    return handleRequest(request.post('/user/login', {
+      username,
+      password
+    }))
   },
   createTodo(todo) {
     return handleRequest(request.post('/api/todo', todo))
@@ -42,7 +46,9 @@ export default {
     return handleRequest(request.delete(`/api/todo/${id}`))
   },
   deleteAllCompleted(ids) {
-    return handleRequest(request.post('/api/delete/completed', { ids }))
+    return handleRequest(request.post('/api/delete/completed', {
+      ids
+    }))
   },
   updateTodo(id, todo) {
     return handleRequest(request.put(`/api/todo/${id}`, todo))
