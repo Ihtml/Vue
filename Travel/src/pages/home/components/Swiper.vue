@@ -1,30 +1,32 @@
 <template>
-<div class="wrapper">
-  <swiper :options="swiperOption">
-    <!-- slides -->
-    <swiper-slide v-for="item of swiperList" :key="item.id">
-      <img class="swiper-img" :src="item.imgUrl" />
-    </swiper-slide>
-    <!-- Optional controls -->
-    <div class="swiper-pagination"  slot="pagination"></div>
-  </swiper>
-</div>
+  <div class="wrapper">
+    <swiper :options="swiperOption" :not-next-tick="notNextTick" ref="mySwiper">
+      <!-- slides -->
+      <swiper-slide v-for="item of swiperList" :key="item.id">
+        <img class="swiper-img" :src="item.imgUrl" />
+      </swiper-slide>
+      <!-- Optional controls -->
+      <div class="swiper-pagination" slot="pagination"></div>
+    </swiper>
+  </div>
 </template>
 <script>
 export default {
   name: 'HomeSwiper',
-  data () {
+  data() {
     return {
+      notNextTick: true,
       swiperOption: {
         // swiper下的圆点
         pagination: '.swiper-pagination',
         loop: true,
-        autoplay: 3000
+        autoplay: 3000,
+        autoplayDisableOnInteraction: false
       },
       swiperList: [{
         id: '0001',
         imgUrl: 'http://img1.qunarzz.com/piao/fusion/1808/46/ad623dcbd4663f02.jpg_750x200_7f58a60e.jpg'
-      },{
+      }, {
         id: '0002',
         imgUrl: 'http://img1.qunarzz.com/piao/fusion/1806/3c/c72a1ccd4d7b2202.jpg_750x200_b88bbab4.jpg'
       }]
