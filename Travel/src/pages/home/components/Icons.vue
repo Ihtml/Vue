@@ -86,6 +86,8 @@ export default {
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl'
 @import '~styles/mixins.styl'
+.icons >>> .swiper-pagination
+  bottom 0
 .icons >>> .swiper-pagination-bullet
   width 0.12rem
   height 0.12rem
@@ -108,7 +110,7 @@ export default {
     box-sizing border-box
     width 1.1rem
     height 1.1rem
-    margin 0 auto
+    margin 0.1rem auto 0
     .icon-img-content
       display block
       margin 0 auto
