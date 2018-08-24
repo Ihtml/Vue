@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption" :not-next-tick="notNextTick" ref="mySwiper">
+    <swiper v-if="showSwiper" :options="swiperOption" :not-next-tick="notNextTick" ref="mySwiper">
       <!-- slides -->
-      <swiper-slide v-for="item of swiperList" :key="item.id">
+      <swiper-slide v-for="item of list" :key="item.id">
         <img class="swiper-img" :src="item.imgUrl" />
       </swiper-slide>
       <!-- Optional controls -->
@@ -13,6 +13,9 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    list: Array
+  },
   data() {
     return {
       notNextTick: true,
@@ -22,14 +25,12 @@ export default {
         loop: true,
         autoplay: 3000,
         autoplayDisableOnInteraction: false
-      },
-      swiperList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1808/46/ad623dcbd4663f02.jpg_750x200_7f58a60e.jpg'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1806/3c/c72a1ccd4d7b2202.jpg_750x200_b88bbab4.jpg'
-      }]
+      }
+    }
+  },
+  computed: {
+    showSwiper() {
+      return this.list.length
     }
   }
 }
@@ -38,6 +39,7 @@ export default {
 .wrapper >>> .swiper-pagination-bullet-active
   background #fff
 .wrapper
+  // touch-action none
   overflow hidden
   width 100%
   height 0
