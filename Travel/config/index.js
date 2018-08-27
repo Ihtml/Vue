@@ -17,9 +17,23 @@ module.exports = {
         pathRewrite: {
           '^/api': '/static/data'
         }
-      }
+      },
+      '/user': {
+        target: 'http://localhost:80',
+        pathRewrite: {
+          '^/user': '/Recruit/api/user'
+        }
+      },
+      '/public': {
+        target: 'http://eo99.com',
+        changeOrigin: true,
+        pathRewrite: {
+          // 两种请求方式
+          '^/public': '/?s=api/user'
+          // '^/public': '/?m=api&c=user&a=travel'
+        }
+      },
     },
-
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
@@ -27,7 +41,6 @@ module.exports = {
     errorOverlay: true,
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
-
     // Use Eslint Loader?
     // If true, your code will be linted during bundling and
     // linting errors and warnings will be shown in the console.
