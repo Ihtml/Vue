@@ -1,4 +1,4 @@
-# travel
+# travel(用Vue实现的去哪儿移动端单页面应用)
 
 > a Vue.js mobile single page application
 
