@@ -87,6 +87,7 @@ export default {
 
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl'
+@import '~styles/mixins.styl'
 .border-topbottom
   &:before
     border-color #ccc
@@ -120,8 +121,10 @@ export default {
         text-align center
         border 0.02rem solid #ccc
         border-radius 0.06rem
+        ellipsis()
   .item-list
     .item
       line-height 0.76rem
       padding-left 0.2rem
+      ellipsis()
 </style>
