@@ -1,12 +1,7 @@
 <template>
   <ul class="list">
-    <li
-      class="item"
-      v-for="(item, key) of cities"
-      :key="key"
-      @click="handleLetterClick"
-    >
-      {{key}}
+    <li class="item" v-for="item of letters" :key="item" :ref="item" @touchstart="handleTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd" @click="handleLetterClick">
+      {{item}}
     </li>
   </ul>
 </template>
@@ -14,12 +9,56 @@
 <script>
 export default {
   name: 'CityAlphabet',
-  props:{
+  props: {
     cities: Object
   },
+  computed: {
+    letters() {
+      const letters = []
+      for (const i in this.cities) {
+        if (this.cities.hasOwnProperty(i)) {
+          letters.push(i)
+        }
+      }
+      return letters
+    }
+  },
+  data() {
+    return {
+      touchStatus: false,
+      startY: 0,
+      timer: null
+    }
+  },
+  updated() {
+    // 当前元素顶部距离最近父元素顶部的距离
+    this.startY = this.$refs['A'][0].offsetTop
+  },
   methods: {
-    handleLetterClick (e) {
+    handleLetterClick(e) {
       this.$emit('change', e.target.innerText)
+    },
+    handleTouchStart() {
+      this.touchStatus = true
+    },
+    handleTouchMove(e) {
+      if (this.touchStatus) {
+        // 函数节流 提高性能
+        if (this.timer) {
+          clearTimeout(this.timer)
+        }
+        this.timer = setTimeout(() => {
+          // clientY返回事件被触发时鼠标指针向对于浏览器页面（客户区）的垂直坐标。 客户区指的是当前窗口。
+          const touchY = e.touches[0].clientY - 79
+          const index = Math.floor((touchY - this.startY) / 20)
+          if (index >= 0 && index < this.letters.length) {
+            this.$emit('change', this.letters[index])
+          }
+        }, 16)
+      }
+    },
+    handleTouchEnd() {
+      this.touchStatus = false
     }
   }
 }
