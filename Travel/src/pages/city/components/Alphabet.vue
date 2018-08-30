@@ -13,7 +13,7 @@ export default {
     cities: Object
   },
   computed: {
-    letters() {
+    letters () {
       const letters = []
       for (const i in this.cities) {
         if (this.cities.hasOwnProperty(i)) {
@@ -23,25 +23,25 @@ export default {
       return letters
     }
   },
-  data() {
+  data () {
     return {
       touchStatus: false,
       startY: 0,
       timer: null
     }
   },
-  updated() {
+  updated () {
     // 当前元素顶部距离最近父元素顶部的距离
     this.startY = this.$refs['A'][0].offsetTop
   },
   methods: {
-    handleLetterClick(e) {
+    handleLetterClick (e) {
       this.$emit('change', e.target.innerText)
     },
-    handleTouchStart() {
+    handleTouchStart () {
       this.touchStatus = true
     },
-    handleTouchMove(e) {
+    handleTouchMove (e) {
       if (this.touchStatus) {
         // 函数节流 提高性能
         if (this.timer) {
@@ -57,7 +57,7 @@ export default {
         }, 16)
       }
     },
-    handleTouchEnd() {
+    handleTouchEnd () {
       this.touchStatus = false
     }
   }

@@ -24,7 +24,7 @@ export default {
     HomeRecommend,
     HomeWeekend
   },
-  data() {
+  data () {
     return {
       city: '',
       swiperList: [],
@@ -34,7 +34,7 @@ export default {
     }
   },
   methods: {
-    getHomeInfo() {
+    getHomeInfo () {
       axios.get('/api/index.json')
         .then(this.getHomeInfoSucc)
       // axios.get('/user/travel')
@@ -42,7 +42,7 @@ export default {
       // axios.get('/public/travel')
       //   .then(this.getHomeInfoSucc)
     },
-    getHomeInfoSucc(res) {
+    getHomeInfoSucc (res) {
       res = res.data
       if (res.ret && res.data) {
         const data = res.data
@@ -54,7 +54,7 @@ export default {
       }
     }
   },
-  mounted() {
+  mounted () {
     this.getHomeInfo()
   }
 }

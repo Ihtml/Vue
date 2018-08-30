@@ -16,7 +16,7 @@ export default {
   props: {
     list: Array
   },
-  data() {
+  data () {
     return {
       notNextTick: true,
       swiperOption: {
@@ -29,7 +29,7 @@ export default {
     }
   },
   computed: {
-    showSwiper() {
+    showSwiper () {
       return this.list.length
     }
   }

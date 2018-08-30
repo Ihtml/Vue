@@ -22,7 +22,7 @@ export default {
   props: {
     list: Array
   },
-  data() {
+  data () {
     return {
       notNextTick: true,
       swiperOption: {
@@ -33,7 +33,7 @@ export default {
     }
   },
   computed: {
-    pages() {
+    pages () {
       const pages = []
       this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
@@ -90,4 +90,3 @@ export default {
     color $darkTextColor
     ellipsis()
 </style>
-
