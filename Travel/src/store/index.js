@@ -10,7 +10,7 @@ export default new Vuex.Store({
   mutations,
   getters: {
     reverseCity (state) {
-      return state.ctiy.split('').reverse().join('')
+      return state.city.split('').reverse().join('')
     }
   }
 })
