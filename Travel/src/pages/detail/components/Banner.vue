@@ -1,5 +1,7 @@
 <template>
-  <div>banner</div>
+  <div>banner
+    <span class="iconfont banner-icon">&#xe6dd;</span>
+  </div>
 </template>
 
 <script>
@@ -10,4 +12,3 @@ export default {
 
 <style lang="stylus" scoped>
 </style>
-
