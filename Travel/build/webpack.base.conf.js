@@ -4,7 +4,7 @@ const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 
-function resolve(dir) {
+function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
@@ -38,7 +38,8 @@ module.exports = {
       // @代表src目录
       '@': resolve('src'),
       // styles代表src/assets/styles目录
-      'styles': resolve('src/assets/styles')
+      'styles': resolve('src/assets/styles'),
+      'common': resolve('src/common')
     }
   },
   module: {
