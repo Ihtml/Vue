@@ -1,7 +1,16 @@
 <template>
   <div>
     <div class="banner" @click="handleBannerClick">
-      <span class="iconfont banner-icon">&#xe6dd;</span>
+      <img class="banner-img" src="http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg" />
+      <div class="banner-info">
+        <div class="banner-tittle">
+          大连圣亚海洋世界(AAAA景区)
+        </div>
+        <div class="banner-number">
+          <span class="iconfont banner-icon">&#xe6dd;</span>
+          39
+        </div>
+      </div>
     </div>
     <common-gallary :imgs="imgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
   </div>
@@ -62,25 +71,4 @@ export default {
         font-size: .24rem
         .banner-icon
           font-size: .24rem
-</style>
-
-
-      showGallary: false
-    }
-  },
-  components: {
-    CommonGallary
-  },
-  methods: {
-    handleBannerClick () {
-      this.showGallary = true
-    },
-    handleGallaryClose () {
-      this.showGallary = false
-    }
-  }
-}
-</script>
-
-<style lang="stylus" scoped>
 </style>
