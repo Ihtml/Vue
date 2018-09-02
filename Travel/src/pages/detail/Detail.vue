@@ -35,6 +35,7 @@ export default {
   methods: {
     getDetailInfo () {
       axios.get('/api/detail.json', {
+        // params会默认把要传的参数添加到url后面
         params: {
           id: this.$route.params.id
         }
