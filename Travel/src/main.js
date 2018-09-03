@@ -7,6 +7,7 @@ import store from './store'
 // 解决移动端click事件300ms延迟的问题
 import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'babel-polyfill'
 import 'swiper/dist/css/swiper.css'
 import 'styles/reset.css'
 // 解决高清屏1像素边框问题
