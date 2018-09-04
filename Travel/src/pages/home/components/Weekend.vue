@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="weekend">
     <div class="title">周末去哪儿</div>
     <ul>
       <li class="item border-bottom" v-for="item of list" :key="item.id">
@@ -26,8 +26,9 @@ export default {
 
 <style lang="stylus" scoped>
 @import '~styles/mixins.styl'
+.weekend
+  background #fff
 .title
-  margin-top 0.2rem
   line-height 0.8rem
   background #eee
   text-indent 0.2rem
@@ -40,11 +41,15 @@ export default {
 .item-info
   padding 0.1rem
   .item-title
-    line-height 0.54rem
-    font-size 0.32rem
+    padding-right 1.4rem
+    color #212121
+    font-size 0.28rem
+    line-height 0.48rem
     ellipsis()
   .item-desc
-    line-height 0.4rem
-    color #ccc
+    padding-right 1.4rem
+    color #616161
+    font-size 0.24rem
+    line-height 0.42rem
     ellipsis()
 </style>

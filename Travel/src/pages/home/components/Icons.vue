@@ -52,7 +52,7 @@ export default {
 @import '~styles/varibles.styl'
 @import '~styles/mixins.styl'
 .icons >>> .swiper-pagination
-  bottom 0
+  bottom 6px
 .icons >>> .swiper-pagination-bullet
   width 0.12rem
   height 0.12rem
@@ -65,13 +65,14 @@ export default {
   overflow hidden
 .icons
   margin-top 0.1rem
+  background #fff
 .wrap
   display flex
   flex-wrap wrap
 .icon
   width 25%
   height 0
-  padding-bottom 25%
+  padding-bottom 21%
   overflow hidden
   .icon-img
     box-sizing border-box
