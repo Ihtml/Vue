@@ -40,9 +40,11 @@ export default {
       this.$emit('change', e.target.innerText)
     },
     handleTouchStart () {
+      console.log('touch start')
       this.touchStatus = true
     },
     handleTouchMove (e) {
+      console.log('touch move')
       if (this.touchStatus) {
         // 函数节流 提高性能
         if (this.timer) {
@@ -59,6 +61,7 @@ export default {
       }
     },
     handleTouchEnd () {
+      console.log('touch end')
       this.touchStatus = false
     }
   }
