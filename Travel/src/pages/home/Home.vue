@@ -5,6 +5,7 @@
     <home-icons :list="iconList"></home-icons>
     <home-list-item></home-list-item>
     <home-active-con></home-active-con>
+    <home-hot-list></home-hot-list>
     <home-recommend :list="recommendList"></home-recommend>
     <home-weekend :list="weekendList"></home-weekend>
   </div>
@@ -16,6 +17,7 @@ import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
 import HomeListItem from './components/ListItem'
 import HomeActiveCon from './components/ActiveCon'
+import HomeHotList from './components/HotList'
 import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
 import axios from 'axios'
@@ -28,6 +30,7 @@ export default {
     HomeIcons,
     HomeListItem,
     HomeActiveCon,
+    HomeHotList,
     HomeRecommend,
     HomeWeekend
   },
