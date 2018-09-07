@@ -9,63 +9,18 @@
       </a>
     </div>
     <ul class="list">
-      <li class="item">
-        <a class="item-link" href="http://touch.piao.qunar.com/touch/detail.htm?id=6330&from=as_recommend_sight">
-          <div class="item-tag">
-            <img class="tag-img" src="http://img1.qunarzz.com/piao/fusion/1710/ab/159673b63e6ca702.png">
+      <li class="item" v-for="item of list" :key="item.id">
+        <a class="item-link" :href="item.linkUrl">
+          <div class="item-tag" v-show="item.tagImg">
+            <img class="tag-img" :src="item.tagImg">
           </div>
           <div class="item-img">
-            <img src="http://img1.qunarzz.com/sight/p0/1508/f7/f7c3be996152011c.img.jpg_150x150_eab8097d.jpg">
+            <img :src="item.imgUrl">
           </div>
-          <div class="item-sight">南京总统府</div>
+          <div class="item-sight">{{item.title}}</div>
           <div class="item-price">
             <span class="price-tag">￥</span>
-            <span class="price-num">35</span>
-            <span class="price-txt">起</span>
-          </div>
-        </a>
-      </li>
-      <li class="item">
-        <a class="item-link" href="http://touch.piao.qunar.com/touch/detail.htm?id=6330&from=as_recommend_sight">
-          <div class="item-tag">
-            <img class="tag-img" src="http://img1.qunarzz.com/piao/fusion/1710/2d/36d0c4adaebbbc02.png">
-          </div>
-          <div class="item-img">
-            <img src="http://img1.qunarzz.com/sight/p0/1508/f7/f7c3be996152011c.img.jpg_150x150_eab8097d.jpg">
-          </div>
-          <div class="item-sight">南京总统府</div>
-          <div class="item-price">
-            <span class="price-tag">￥</span>
-            <span class="price-num">35</span>
-            <span class="price-txt">起</span>
-          </div>
-        </a>
-      </li>
-      <li class="item">
-        <a class="item-link" href="http://touch.piao.qunar.com/touch/detail.htm?id=6330&from=as_recommend_sight">
-          <div class="item-tag">
-            <img src="http://img1.qunarzz.com/piao/fusion/1710/67/edc47ffef9e96b02.png" class="tag-img">
-          </div>
-          <div class="item-img">
-            <img src="http://img1.qunarzz.com/sight/p0/1508/f7/f7c3be996152011c.img.jpg_150x150_eab8097d.jpg">
-          </div>
-          <div class="item-sight">南京总统府</div>
-          <div class="item-price">
-            <span class="price-tag">￥</span>
-            <span class="price-num">35</span>
-            <span class="price-txt">起</span>
-          </div>
-        </a>
-      </li>
-      <li class="item">
-        <a class="item-link" href="http://touch.piao.qunar.com/touch/detail.htm?id=6330&from=as_recommend_sight">
-          <div class="item-img">
-            <img src="http://img1.qunarzz.com/sight/p0/1508/f7/f7c3be996152011c.img.jpg_150x150_eab8097d.jpg">
-          </div>
-          <div class="item-sight">南京总统府</div>
-          <div class="item-price">
-            <span class="price-tag">￥</span>
-            <span class="price-num">35</span>
+            <span class="price-num">{{item.price}}</span>
             <span class="price-txt">起</span>
           </div>
         </a>
@@ -76,7 +31,10 @@
 
 <script>
 export default {
-  name: 'HomeHotList'
+  name: 'HomeHotList',
+  props: {
+    list: Array
+  }
 }
 </script>
 

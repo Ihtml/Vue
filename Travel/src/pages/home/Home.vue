@@ -5,7 +5,7 @@
     <home-icons :list="iconList"></home-icons>
     <home-list-item></home-list-item>
     <home-active-con></home-active-con>
-    <home-hot-list></home-hot-list>
+    <home-hot-list :list="hotList"></home-hot-list>
     <home-recommend :list="recommendList"></home-recommend>
     <home-weekend :list="weekendList"></home-weekend>
   </div>
@@ -39,6 +39,7 @@ export default {
       lastCity: '',
       swiperList: [],
       iconList: [],
+      hotList: [],
       recommendList: [],
       weekendList: []
     }
@@ -64,6 +65,7 @@ export default {
         this.iconList = data.iconList
         this.recommendList = data.recommendList
         this.weekendList = data.weekendList
+        this.hotList = data.hotList
       }
     }
   },

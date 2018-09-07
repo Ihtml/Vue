@@ -80,6 +80,53 @@
         "desc": "牛首山"
       }
     ],
+    "hotList": [
+      {
+        "id": "0001",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1508/f7/f7c3be996152011c.img.jpg_150x150_eab8097d.jpg",
+        "title": "南京总统府",
+        "price": "35",
+        "tagImg": "http://img1.qunarzz.com/piao/fusion/1710/ab/159673b63e6ca702.png",
+        "linkUrl": "http://touch.piao.qunar.com/touch/detail.htm?id=6330&from=as_recommend_sight"
+      },
+      {
+        "id": "0002",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1411/13/0cd5a9a57ae0d1b9b935ec604ce0f9bf.water.jpg_150x150_438a6890.jpg",
+        "title": "南京海底世界",
+        "price": "95",
+        "linkUrl": "http://touch.piao.qunar.com/touch/detail.htm?id=918&from=as_recommend_sight",
+        "tagImg": "http://img1.qunarzz.com/piao/fusion/1710/2d/36d0c4adaebbbc02.png"
+      },
+      {
+        "id": "0003",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/201305/22/273c38aa938ad97dc8d65eac.jpg_150x150_964040ab.jpg",
+        "title": "中山陵",
+        "price": "25",
+        "linkUrl": "http://touch.piao.qunar.com/touch/detail.htm?id=1474&from=as_recommend_sight",
+        "tagImg": "http://img1.qunarzz.com/piao/fusion/1710/67/edc47ffef9e96b02.png"
+      },
+      {
+        "id": "0004",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1701/b8/b806750f5c23b867a3.img.png_150x150_2e2b3360.png",
+        "title": "夫子庙",
+        "linkUrl": "http://touch.piao.qunar.com/touch/detail.htm?id=7338&from=as_recommend_sight",
+        "price": "12"
+      },
+      {
+        "id": "0005",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1601/93/93fc9519bd1959b890.img.jpg_150x150_3e15b2a3.jpg",
+        "title": "牛首山文化旅游区",
+        "linkUrl": "http://touch.piao.qunar.com/touch/detail.htm?id=190898&from=as_recommend_sight",
+        "price": "49"
+      },
+      {
+        "id": "0006",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1507/a3/a37ced8252b273c9.img.jpg_150x150_8eea713b.jpg",
+        "title": "夫子庙秦淮河游船",
+        "linkUrl": "http://touch.piao.qunar.com/touch/detail.htm?id=6141&from=as_recommend_sight",
+        "price": "57"
+      }
+    ],
     "recommendList": [
       {
         "id": "0001",
