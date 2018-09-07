@@ -6,7 +6,7 @@
     <home-list-item></home-list-item>
     <home-active-con></home-active-con>
     <home-hot-list :list="hotList"></home-hot-list>
-    <home-recommend :list="recommendList"></home-recommend>
+    <home-guess></home-guess>
     <home-weekend :list="weekendList"></home-weekend>
   </div>
 </template>
@@ -18,7 +18,7 @@ import HomeIcons from './components/Icons'
 import HomeListItem from './components/ListItem'
 import HomeActiveCon from './components/ActiveCon'
 import HomeHotList from './components/HotList'
-import HomeRecommend from './components/Recommend'
+import HomeGuess from './components/Guess'
 import HomeWeekend from './components/Weekend'
 import axios from 'axios'
 import { mapState } from 'vuex'
@@ -31,7 +31,7 @@ export default {
     HomeListItem,
     HomeActiveCon,
     HomeHotList,
-    HomeRecommend,
+    HomeGuess,
     HomeWeekend
   },
   data () {

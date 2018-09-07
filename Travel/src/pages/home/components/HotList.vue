@@ -5,7 +5,7 @@
       <span class="title-txt">本周热门榜单</span>
       <a class="title-more" href="http://touch.piao.qunar.com/touch/weekHotSales.htm?cityName=南京">
         全部榜单
-        <span class="title-more-icon">></span>
+        <span class="iconfont title-more-icon">&#xe7f9;</span>
       </a>
     </div>
     <ul class="list">
@@ -68,7 +68,10 @@ export default {
       font-size 0.24rem
       line-height 0.28rem
       .title-more-icon
-        margin-left 0.04rem
+        font-size 0.35rem
+        position relative
+        top 0.04rem
+        left -0.06rem
   .list
     padding 0 0.24rem
     overflow-x scroll

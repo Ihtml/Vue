@@ -1,0 +1,110 @@
+<template>
+  <div class="guess">
+    <div class="title">
+      <img class="title-img" src="http://img1.qunarzz.com/piao/fusion/1711/89/ebc329f16c55bb02.png" alt="猜你喜欢">
+      <span class="title-txt">猜你喜欢</span>
+    </div>
+    <ul class="list">
+      <li class="item border-bottom">
+        <a class="item-link" href="http://touch.piao.qunar.com/touch/detail.htm?id=2720719629&from=as_recommend_sight">
+          <div class="item-img">
+            <img class="item-like-img" src="http://img1.qunarzz.com/sight/p0/1411/13/0cd5a9a57ae0d1b9b935ec604ce0f9bf.water.jpg_200x200_9b808f51.jpg">
+          </div>
+          <div class="item-tag">随买随用</div>
+          <div class="item-info">
+            <div class="info-title">南京海底世界</div>
+            <div class="info-comment">
+              <span class="starlevel iconfont">&#xe81b;&#xe81b;&#xe81b;&#xe81b;&#xe81b;</span>
+              <span class="comment-num">1000条评论</span>
+            </div>
+            <div class="info-price">
+              <span class="price">
+                ￥
+                <em class="price-num">95</em>
+              </span>起
+              <span class="address">玄武区</span>
+            </div>
+            <div class="info-feature">
+              这里特别受欢迎哟(๑‾ ꇴ ‾๑)
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <a href="http://touch.piao.qunar.com/touch/list_南京_景点门票.html" class="more border-top">查看所有产品</a>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'HomeGuess'
+}
+</script>
+
+<style lang="stylus" scoped>
+@import '~styles/mixins.styl'
+.guess
+  margin-top 0.2rem
+  background #fff
+.title
+  padding 0.24rem 0 0.26rem
+  .title-img
+    display inline-block
+    overflow hidden
+    width 0.3rem
+    height 0.3rem
+    margin-left 0.2rem
+    vertical-align top
+  .title-txt
+    display inline-block
+    margin-left 0.08rem
+    height 0.44rem
+    width 6rem
+    color #212121
+    font-size 0.32rem
+    line-height 0.44rem
+    ellipsis()
+.list
+  margin-left 0.24rem
+  .item
+    position relative
+    overflow hidden
+    padding 0.2rem 0
+    .item-link
+      width 100%
+      height 100%
+      .item-img
+        float left
+        overflow hidden
+        width 2rem
+        height 2rem
+        background #f0f5f8
+        .item-like-img
+          width 100%
+          height 100%
+      .item-tag
+        position absolute
+        top 0.2rem
+        left 0
+        width 1.02rem
+        height 0.38rem
+        background-size 100%
+        background-color #ffaa1e
+        border-bottom-right-radius 0.2rem
+        color #fff
+        font-size 0.2rem
+        line-height 0.38rem
+        text-indent 0.04rem
+      .item-info
+        overflow hidden
+        padding-left 0.22rem
+        .info-title
+          margin-top 0.26rem
+          height 0.44rem
+          color #212121
+          font-size 0.32rem
+          line-height 0.44rem
+        .info-comment
+          margin-top 0.14rem
+          height 0.34rem
+</style>
