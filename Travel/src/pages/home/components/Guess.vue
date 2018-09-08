@@ -14,7 +14,10 @@
           <div class="item-info">
             <div class="info-title">南京海底世界</div>
             <div class="info-comment">
-              <span class="starlevel iconfont">&#xe81b;&#xe81b;&#xe81b;&#xe81b;&#xe81b;</span>
+              <span class="starlevel">
+                <span class="starlevel-gain iconfont">&#xe81b;&#xe81b;&#xe81b;&#xe81b;&#xe81b;</span>
+                <span class="iconfont starlevel-total">&#xe81b;&#xe81b;&#xe81b;&#xe81b;&#xe81b;</span>
+              </span>
               <span class="comment-num">1000条评论</span>
             </div>
             <div class="info-price">
@@ -107,4 +110,54 @@ export default {
         .info-comment
           margin-top 0.14rem
           height 0.34rem
+          .starlevel
+            display inline-block
+            position relative
+            width 1.2rem
+            margin-right 0.3rem
+            height 0.28rem
+            line-height 0.28rem
+            .starlevel-gain
+              z-index 2
+              position absolute
+              overflow hidden
+              width 75%
+              top 0.04rem
+              left 0
+              height 0.28rem
+              color #ffb436
+              font-size 0.24rem
+            .starlevel-total
+              z-index 1
+              color #e0e0e0
+              overflow hidden
+              position absolute
+              top 0.04rem
+              left 0
+              height 0.28rem
+              font-size 0.24rem
+          .comment-num
+            color #616161
+            font-size .24rem
+            line-height .34rem
+            vertical-align text-bottom
+        .info-price
+          position: relative
+          margin-top .22rem
+          color #616161
+          font-size .24rem
+          line-height .4rem
+          .address
+            position absolute
+            right .24rem
+            bottom 0
+        .info-feature
+          display inline-block
+          margin-top .48rem
+          margin-right .24rem
+          background #fff9f9
+          padding .04rem .1rem
+          color #f55
+          font-size .24rem
+          line-height .34rem
 </style>
