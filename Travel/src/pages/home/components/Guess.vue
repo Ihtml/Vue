@@ -121,7 +121,7 @@ export default {
               z-index 2
               position absolute
               overflow hidden
-              width 75%
+              width 90%
               top 0.04rem
               left 0
               height 0.28rem
@@ -147,6 +147,11 @@ export default {
           color #616161
           font-size .24rem
           line-height .4rem
+          .price
+            color #ff8300
+            .price-num
+              font-size 0.4rem
+              margin-left -0.1rem
           .address
             position absolute
             right .24rem
@@ -160,4 +165,11 @@ export default {
           color #f55
           font-size .24rem
           line-height .34rem
+.more
+  display block
+  padding .2rem 0
+  color #00afc7
+  font-size .28rem
+  line-height .4rem
+  text-align center
 </style>
