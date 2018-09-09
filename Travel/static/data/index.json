@@ -164,31 +164,36 @@
         "id": "0001",
         "imgUrl": "http://img1.qunarzz.com/sight/source/1505/f1/ae9d4299b8aaea.jpg_r_640x214_0c555905.jpg",
         "title": "南京必游TOP10",
-        "desc": "看尽王侯将相荣辱成败，六朝金粉潮起潮落"
+        "desc": "看尽王侯将相荣辱成败，六朝金粉潮起潮落",
+        "linkUrl": "http://piao.qunar.com/touch/toSku.htm?skuId=188&skuName=南京必游TOP10&cat=from_area%3Dts_sku%26from_index%3D0%26from_value%3D%25E5%258D%2597%25E4%25BA%25AC%25E5%25BF%2585%25E6%25B8%25B8TOP10%26dist_city%3D%25E5%258D%2597%25E4%25BA%25AC"
       },
       {
         "id": "0002",
         "imgUrl": "http://img1.qunarzz.com/sight/source/1505/e1/cdbf56d837da59.jpg_r_640x214_105fc3f2.jpg",
         "title": "民国情怀国共风华",
-        "desc": "找到你心中想要的那个民国时期的南京"
+        "desc": "找到你心中想要的那个民国时期的南京",
+        "linkUrl": "http://piao.qunar.com/touch/toSku.htm?skuId=191&skuName=民国情怀国共风华&cat=from_area%3Dts_sku%26from_index%3D1%26from_value%3D%25E6%25B0%2591%25E5%259B%25BD%25E6%2583%2585%25E6%2580%2580%25E5%259B%25BD%25E5%2585%25B1%25E9%25A3%258E%25E5%258D%258E%26dist_city%3D%25E5%258D%2597%25E4%25BA%25AC"
       },
       {
         "id": "0003",
         "imgUrl": "http://img1.qunarzz.com/sight/source/1509/31/534910d969850a.jpg_r_640x214_6ac50353.jpg",
         "title": "南京赏秋指南",
-        "desc": "金色与红色的完美交融造就了南京秋天的色调"
+        "desc": "金色与红色的完美交融造就了南京秋天的色调",
+        "linkUrl": "http://piao.qunar.com/touch/toSku.htm?skuId=469&skuName=南京赏秋指南&cat=from_area%3Dts_sku%26from_index%3D2%26from_value%3D%25E5%258D%2597%25E4%25BA%25AC%25E8%25B5%258F%25E7%25A7%258B%25E6%258C%2587%25E5%258D%2597%26dist_city%3D%25E5%258D%2597%25E4%25BA%25AC"
       },
       {
         "id": "0004",
         "imgUrl": "http://img1.qunarzz.com/sight/source/1505/f3/d51669250308cc.jpg_r_640x214_7a127cd0.jpg",
         "title": "秦淮金粉里的南京",
-        "desc": "六朝金粉，处处述说着南京的历史"
+        "desc": "六朝金粉，处处述说着南京的历史",
+        "linkUrl": "http://piao.qunar.com/touch/toSku.htm?skuId=189&skuName=秦淮金粉里的南京&cat=from_area%3Dts_sku%26from_index%3D3%26from_value%3D%25E7%25A7%25A6%25E6%25B7%25AE%25E9%2587%2591%25E7%25B2%2589%25E9%2587%258C%25E7%259A%2584%25E5%258D%2597%25E4%25BA%25AC%26dist_city%3D%25E5%258D%2597%25E4%25BA%25AC"
       },
       {
         "id": "0005",
         "imgUrl": "http://img1.qunarzz.com/sight/source/1603/ff/19b65f7ca38d70.jpg_r_640x214_c9a4a14b.jpg",
         "title": "长江烂漫景",
-        "desc": "览滚滚长江，看山花烂漫"
+        "desc": "览滚滚长江，看山花烂漫",
+        "linkUrl": "http://piao.qunar.com/touch/toSku.htm?skuId=190&skuName=长江烂漫景&cat=from_area%3Dts_sku%26from_index%3D4%26from_value%3D%25E9%2595%25BF%25E6%25B1%259F%25E7%2583%2582%25E6%25BC%25AB%25E6%2599%25AF%26dist_city%3D%25E5%258D%2597%25E4%25BA%25AC"
       }
     ]
   }

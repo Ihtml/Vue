@@ -3,13 +3,15 @@
     <div class="title">周末去哪儿</div>
     <ul>
       <li class="item border-bottom" v-for="item of list" :key="item.id">
-        <div class="item-img-wrapper">
-          <img class="item-img" :src="item.imgUrl" />
-        </div>
-        <div class="item-info">
-          <p class="item-title">{{item.title}}</p>
-          <p class="item-desc">{{item.desc}}</p>
-        </div>
+        <a class="item-link" :href="item.linkUrl">
+          <div class="item-img-wrapper">
+            <img class="item-img" :src="item.imgUrl" />
+          </div>
+          <div class="item-info">
+            <p class="item-title">{{item.title}}</p>
+            <p class="item-desc">{{item.desc}}</p>
+          </div>
+        </a>
       </li>
     </ul>
   </div>
@@ -28,6 +30,10 @@ export default {
 @import '~styles/mixins.styl'
 .weekend
   background #fff
+.item-link
+  display block
+  width 100%
+  height 100%
 .title
   line-height 0.8rem
   background #eee
