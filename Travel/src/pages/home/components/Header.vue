@@ -3,10 +3,10 @@
     <div class="header-left">
       <div class="iconfont back-icon">&#xe624;</div>
     </div>
-    <div class="header-input">
+    <a class="header-input" :href="header.linkUrl">
       <span class="iconfont">&#xe632;</span>
       输入城市/景点/游玩主题
-    </div>
+    </a>
     <router-link to="/city">
       <div class="header-right">
         {{this.city}}
@@ -20,6 +20,9 @@
 import { mapState, mapGetters } from 'vuex'
 export default {
   name: 'HomeHeader',
+  props: {
+    header: Object
+  },
   computed: {
     ...mapState(['city']),
     ...mapGetters(['reverseCity'])
@@ -41,6 +44,8 @@ export default {
       text-align center
       font-size 0.4rem
   .header-input
+    display block
+    height 100%
     flex 1
     height 0.64rem
     line-height 0.64rem
