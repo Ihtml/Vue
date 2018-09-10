@@ -6,7 +6,7 @@
     <home-list-item></home-list-item>
     <home-active-con></home-active-con>
     <home-hot-list :list="hotList"></home-hot-list>
-    <home-guess></home-guess>
+    <home-guess :list="guessList"></home-guess>
     <home-weekend :list="weekendList"></home-weekend>
   </div>
 </template>
@@ -40,6 +40,7 @@ export default {
       swiperList: [],
       iconList: [],
       hotList: [],
+      guessList: [],
       recommendList: [],
       weekendList: []
     }
@@ -64,8 +65,9 @@ export default {
         this.swiperList = data.swiperList
         this.iconList = data.iconList
         this.recommendList = data.recommendList
-        this.weekendList = data.weekendList
+        this.guessList = data.guessList
         this.hotList = data.hotList
+        this.weekendList = data.weekendList
       }
     }
   },

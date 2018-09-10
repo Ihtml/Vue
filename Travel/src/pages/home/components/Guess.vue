@@ -5,30 +5,31 @@
       <span class="title-txt">猜你喜欢</span>
     </div>
     <ul class="list">
-      <li class="item border-bottom">
-        <a class="item-link" href="http://touch.piao.qunar.com/touch/detail.htm?id=2720719629&from=as_recommend_sight">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
+        <a class="item-link" :href="item.linkUrl">
           <div class="item-img">
-            <img class="item-like-img" src="http://img1.qunarzz.com/sight/p0/1411/13/0cd5a9a57ae0d1b9b935ec604ce0f9bf.water.jpg_200x200_9b808f51.jpg">
+            <img class="item-like-img" :src="item.imgUrl">
           </div>
-          <div class="item-tag">随买随用</div>
+          <div class="item-tag" v-if="item.tagName === '随买随用'" style="background: #ffaa1e">{{item.tagName}}</div>
+          <div class="item-tag" v-else-if="item.tagName === '可订明日'" style="background: #08CFE9">{{item.tagName}}</div>
           <div class="item-info">
-            <div class="info-title">南京海底世界</div>
+            <div class="info-title">{{item.title}}</div>
             <div class="info-comment">
               <span class="starlevel">
-                <span class="starlevel-gain iconfont">&#xe81b;&#xe81b;&#xe81b;&#xe81b;&#xe81b;</span>
+                <span class="starlevel-gain iconfont" :style="{width: item.grade*10 + '%'}">&#xe81b;&#xe81b;&#xe81b;&#xe81b;&#xe81b;</span>
                 <span class="iconfont starlevel-total">&#xe81b;&#xe81b;&#xe81b;&#xe81b;&#xe81b;</span>
               </span>
-              <span class="comment-num">1000条评论</span>
+              <span class="comment-num">{{item.commentNum}}条评论</span>
             </div>
             <div class="info-price">
               <span class="price">
                 ￥
-                <em class="price-num">95</em>
+                <em class="price-num">{{item.price}}</em>
               </span>起
-              <span class="address">玄武区</span>
+              <span class="address">{{item.address}}</span>
             </div>
-            <div class="info-feature">
-              这里特别受欢迎哟(๑‾ ꇴ ‾๑)
+            <div class="info-feature" v-if="item.feature">
+              {{item.feature}}
             </div>
           </div>
         </a>
@@ -40,7 +41,32 @@
 
 <script>
 export default {
-  name: 'HomeGuess'
+  name: 'HomeGuess',
+  props: {
+    list: Array
+  },
+  data () {
+    return {
+      tagStyle: {
+        // background: '#ffaa1e'
+      },
+      starStyle: {
+        width: ''
+      }
+    }
+  },
+  methods: {
+    changeTagStyle () {
+
+    },
+    changeStarStyle () {
+
+    }
+  },
+  mounted () {
+    this.changeTagStyle()
+    this.changeStarStyle()
+  }
 }
 </script>
 
@@ -92,7 +118,7 @@ export default {
         width 1.02rem
         height 0.38rem
         background-size 100%
-        background-color #ffaa1e
+        // background-color #ffaa1e
         border-bottom-right-radius 0.2rem
         color #fff
         font-size 0.2rem
@@ -121,7 +147,7 @@ export default {
               z-index 2
               position absolute
               overflow hidden
-              width 90%
+              // width 90%
               top 0.04rem
               left 0
               height 0.28rem
