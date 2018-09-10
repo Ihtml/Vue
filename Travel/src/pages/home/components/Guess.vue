@@ -138,15 +138,15 @@ export default {
               font-size 0.24rem
           .comment-num
             color #616161
-            font-size .24rem
-            line-height .34rem
+            font-size 0.24rem
+            line-height 0.34rem
             vertical-align text-bottom
         .info-price
-          position: relative
-          margin-top .22rem
+          position relative
+          margin-top 0.22rem
           color #616161
-          font-size .24rem
-          line-height .4rem
+          font-size 0.24rem
+          line-height 0.4rem
           .price
             color #ff8300
             .price-num
@@ -154,22 +154,25 @@ export default {
               margin-left -0.1rem
           .address
             position absolute
-            right .24rem
+            right 0.24rem
             bottom 0
+            width 1.2rem
+            text-align right
+            ellipsis()
         .info-feature
           display inline-block
-          margin-top .48rem
-          margin-right .24rem
+          margin-top 0.48rem
+          margin-right 0.24rem
           background #fff9f9
-          padding .04rem .1rem
+          padding 0.04rem 0.1rem
           color #f55
-          font-size .24rem
-          line-height .34rem
+          font-size 0.24rem
+          line-height 0.34rem
 .more
   display block
-  padding .2rem 0
+  padding 0.2rem 0
   color #00afc7
-  font-size .28rem
-  line-height .4rem
+  font-size 0.28rem
+  line-height 0.4rem
   text-align center
 </style>
