@@ -36,7 +36,7 @@ export default {
   },
   data () {
     return {
-      header: null,
+      header: {},
       swiperList: [],
       iconList: [],
       hotList: [],
