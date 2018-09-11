@@ -3,6 +3,7 @@
     <city-header></city-header>
     <city-tab></city-tab>
     <hot-city></hot-city>
+    <city-alphabet :cities="cities"></city-alphabet>
   </div>
 </template>
 
@@ -11,8 +12,8 @@ import axios from 'axios'
 import CityHeader from './components/Header'
 import CityTab from './components/Tab'
 import HotCity from './components/HotCityList'
-import CityList from './components/List'
 import CityAlphabet from './components/Alphabet'
+import CityList from './components/List'
 export default {
   name: 'City',
   components: {
