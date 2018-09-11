@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <div class="city">
     <city-header></city-header>
     <city-tab></city-tab>
+    <hot-city></hot-city>
   </div>
 </template>
 
@@ -9,7 +10,7 @@
 import axios from 'axios'
 import CityHeader from './components/Header'
 import CityTab from './components/Tab'
-import CitySearch from './components/Search'
+import HotCity from './components/HotCityList'
 import CityList from './components/List'
 import CityAlphabet from './components/Alphabet'
 export default {
@@ -17,7 +18,7 @@ export default {
   components: {
     CityHeader,
     CityTab,
-    CitySearch,
+    HotCity,
     CityList,
     CityAlphabet
   },
@@ -52,4 +53,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.city
+  background: #f5f5f5
+  line-height 1
+  color #212121
+  font-size .28rem
 </style>
