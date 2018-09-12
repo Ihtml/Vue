@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'Tab',
+  name: 'CityTab',
   data () {
     return {
       isInBorder: true

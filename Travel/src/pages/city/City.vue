@@ -4,6 +4,7 @@
     <city-tab></city-tab>
     <hot-city></hot-city>
     <city-alphabet :cities="cities"></city-alphabet>
+    <city-list :cities="cities"></city-list>
   </div>
 </template>
 
@@ -55,8 +56,8 @@ export default {
 
 <style lang="stylus" scoped>
 .city
-  background: #f5f5f5
+  background #f5f5f5
   line-height 1
   color #212121
-  font-size .28rem
+  font-size 0.28rem
 </style>

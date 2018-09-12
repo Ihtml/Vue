@@ -1,29 +1,13 @@
 <template>
   <div class="list" ref="wrapper">
     <div>
-      <div class="area">
-        <div class="title border-topbottom">当前城市</div>
-        <div class="button-list">
-          <div class="button-wrapper">
-            <div class="button">{{this.currentCity}}</div>
-          </div>
-        </div>
-      </div>
-      <div class="area">
-        <div class="title border-topbottom">热门城市</div>
-        <div class="button-list">
-          <div class="button-wrapper" v-for="item of hot" :key="item.id" @click="handleCityClick(item.name)">
-            <div class="button">{{item.name}}</div>
-          </div>
-        </div>
-      </div>
       <div class="area" v-for="(item, key) of cities" :key="key" :ref="key">
-        <div class="title border-topbottom">{{key}}</div>
-        <div class="item-list">
-          <div class="item border-bottom" v-for="innerItem of item" :key="innerItem.id" @click="handleCityClick(innerItem.name)">
+        <div class="title">{{key}}</div>
+        <ul class="item-list">
+          <li class="item" v-for="innerItem of item" :key="innerItem.id" @click="handleCityClick(innerItem.name)">
             {{innerItem.name}}
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -69,43 +53,41 @@ export default {
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl'
 @import '~styles/mixins.styl'
-.border-topbottom
-  &:before
-    border-color #ccc
-  &:after
-    border-color #ccc
-.border-bottom
-  &:before
-    border-color #ccc
-.list
+.title
+  font-size 0.24rem
+  margin 0.24rem 0.3rem
+.item-list
+  position relative
   overflow hidden
-  position absolute
-  top 1.58rem
-  left 0
-  right 0
-  bottom 0
-  .title
-    line-height 0.54rem
-    background #eee
-    padding-left 0.2rem
-    color #666
-    font-size 0.26rem
-  .button-list
-    overflow hidden
-    padding 0.1rem 0.6rem 0.1rem 0.1rem
-    .button-wrapper
-      float left
-      width 33.33%
-      .button
-        margin 0.1rem
-        padding 0.1rem 0
-        text-align center
-        border 0.02rem solid #ccc
-        border-radius 0.06rem
-        ellipsis()
-  .item-list
-    .item
-      line-height 0.76rem
-      padding-left 0.2rem
-      ellipsis()
+  z-index 0
+  background-color #fff
+  &:before
+    content ''
+    position absolute
+    width 25%
+    left 25%
+    height 100%
+    border-left 0.02rem solid #ddd
+    border-right 0.02rem solid #ddd
+  &:after
+    content ''
+    position absolute
+    width 10%
+    left 75%
+    height 100%
+    border-left 0.02rem solid #ddd
+    border-right 0
+  .item
+    width 25%
+    height 0.9rem
+    line-height 0.9rem
+    font-size 0.28rem
+    text-align center
+    border-bottom 0.02rem solid #ddd
+    margin-bottom -1px
+    float left
+    position relative
+    z-index 10
+    color #212121
+ellipsis()
 </style>
