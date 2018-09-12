@@ -4873,6 +4873,1091 @@
           "name": "遵化"
         }
       ]
+    },
+    "hotCitiesAbroad": [
+      {
+        "id": 1,
+        "spell": "beijing",
+        "name": "香港"
+      },
+      {
+        "id": 3,
+        "spell": "shanghai",
+        "name": "澳门"
+      },
+      {
+        "id": 239,
+        "spell": "sanya",
+        "name": "台湾"
+      },
+      {
+        "id": 30,
+        "spell": "nanjing",
+        "name": "曼谷"
+      },
+      {
+        "id": 18,
+        "spell": "hangzhou",
+        "name": "新加坡"
+      },
+      {
+        "id": 13,
+        "spell": "guangzhou",
+        "name": "首尔"
+      },
+      {
+        "id": 8,
+        "spell": "chengdu",
+        "name": "东京"
+      },
+      {
+        "id": 37,
+        "spell": "shenzhen",
+        "name": "济南岛"
+      },
+      {
+        "id": 39,
+        "spell": "suzhou",
+        "name": "芭提雅"
+      },
+      {
+        "id": 125,
+        "spell": "guilin",
+        "name": "巴厘岛"
+      },
+      {
+        "id": 47,
+        "spell": "xian",
+        "name": "清迈"
+      },
+      {
+        "id": 46,
+        "spell": "xiamen",
+        "name": "悉尼"
+      },
+      {
+        "id": 49,
+        "spell": "xiamen",
+        "name": "大阪"
+      },
+      {
+        "id": 50,
+        "spell": "xiamen",
+        "name": "洛杉矶"
+      },
+      {
+        "id": 51,
+        "spell": "xiamen",
+        "name": "旧金山"
+      },
+      {
+        "id": 52,
+        "spell": "xiamen",
+        "name": "罗马"
+      },
+      {
+        "id": 53,
+        "spell": "xiamen",
+        "name": "巴黎"
+      },
+      {
+        "id": 54,
+        "spell": "xiamen",
+        "name": "伦敦"
+      },
+      {
+        "id": 55,
+        "spell": "xiamen",
+        "name": "木兰"
+      },
+      {
+        "id": 56,
+        "spell": "xiamen",
+        "name": "纽约"
+      }
+    ],
+    "citiesAbroad": {
+      "A": [
+        {
+          "id": 56,
+          "spell": "aba",
+          "name": "阿富汗"
+        },
+        {
+          "id": 57,
+          "spell": "akesu",
+          "name": "阿尔巴尼亚"
+        },
+        {
+          "id": 58,
+          "spell": "alashanmeng",
+          "name": "阿尔及尼亚"
+        },
+        {
+          "id": 59,
+          "spell": "aletai",
+          "name": "美国"
+        },
+        {
+          "id": 60,
+          "spell": "ali",
+          "name": "安哥拉"
+        },
+        {
+          "id": 61,
+          "spell": "ankang",
+          "name": "安提瓜和巴"
+        },
+        {
+          "id": 62,
+          "spell": "anqing",
+          "name": "阿联酋"
+        },
+        {
+          "id": 63,
+          "spell": "anshan",
+          "name": "阿根廷"
+        },
+        {
+          "id": 64,
+          "spell": "anshun",
+          "name": "亚美尼亚"
+        },
+        {
+          "id": 65,
+          "spell": "anyang",
+          "name": "阿鲁尼"
+        },
+        {
+          "id": 338,
+          "spell": "acheng",
+          "name": "澳大利亚"
+        },
+        {
+          "id": 339,
+          "spell": "anfu",
+          "name": "奥地利"
+        },
+        {
+          "id": 340,
+          "spell": "anji",
+          "name": "阿塞拜疆"
+        }
+      ],
+      "B": [
+        {
+          "id": 1,
+          "spell": "beijing",
+          "name": "白俄罗斯"
+        },
+        {
+          "id": 66,
+          "spell": "baicheng",
+          "name": "比利时"
+        },
+        {
+          "id": 67,
+          "spell": "baise",
+          "name": "波黑"
+        },
+        {
+          "id": 68,
+          "spell": "baishan",
+          "name": "巴西"
+        },
+        {
+          "id": 69,
+          "spell": "baiyin",
+          "name": "巴西"
+        },
+        {
+          "id": 70,
+          "spell": "bangbu",
+          "name": "巴西"
+        },
+        {
+          "id": 71,
+          "spell": "baoding",
+          "name": "巴西"
+        },
+        {
+          "id": 72,
+          "spell": "baoji",
+          "name": "巴西"
+        },
+        {
+          "id": 73,
+          "spell": "baoshan",
+          "name": "巴西"
+        },
+        {
+          "id": 74,
+          "spell": "baotou",
+          "name": "巴西"
+        },
+        {
+          "id": 75,
+          "spell": "bayannaoer",
+          "name": "巴西"
+        },
+        {
+          "id": 76,
+          "spell": "bayinguoleng",
+          "name": "巴西"
+        },
+        {
+          "id": 77,
+          "spell": "bazhong",
+          "name": "巴西"
+        },
+        {
+          "id": 78,
+          "spell": "beihai",
+          "name": "巴西"
+        },
+        {
+          "id": 79,
+          "spell": "benxi",
+          "name": "巴西"
+        },
+        {
+          "id": 80,
+          "spell": "bijie",
+          "name": "巴西"
+        },
+        {
+          "id": 81,
+          "spell": "binzhou",
+          "name": "巴西"
+        },
+        {
+          "id": 82,
+          "spell": "boertala",
+          "name": "巴西"
+        },
+        {
+          "id": 83,
+          "spell": "bozhou",
+          "name": "巴西"
+        }
+      ],
+      "C": [
+        {
+          "id": 2,
+          "spell": "chongqing",
+          "name": "柬埔寨"
+        },
+        {
+          "id": 5,
+          "spell": "changchun",
+          "name": "喀麦隆"
+        },
+        {
+          "id": 6,
+          "spell": "changsha",
+          "name": "加拿大"
+        },
+        {
+          "id": 7,
+          "spell": "changzhou",
+          "name": "加拿大"
+        },
+        {
+          "id": 8,
+          "spell": "chengdu",
+          "name": "加拿大"
+        },
+        {
+          "id": 84,
+          "spell": "cangzhou",
+          "name": "加拿大"
+        },
+        {
+          "id": 85,
+          "spell": "changde",
+          "name": "加拿大"
+        },
+        {
+          "id": 86,
+          "spell": "changdu",
+          "name": "加拿大"
+        },
+        {
+          "id": 87,
+          "spell": "changji",
+          "name": "加拿大"
+        },
+        {
+          "id": 88,
+          "spell": "changzhi",
+          "name": "加拿大"
+        },
+        {
+          "id": 89,
+          "spell": "chaohu",
+          "name": "加拿大"
+        },
+        {
+          "id": 90,
+          "spell": "chaoyang",
+          "name": "加拿大"
+        },
+        {
+          "id": 91,
+          "spell": "chaozhou",
+          "name": "加拿大"
+        },
+        {
+          "id": 92,
+          "spell": "chengde",
+          "name": "加拿大"
+        },
+        {
+          "id": 93,
+          "spell": "chenzhou",
+          "name": "加拿大"
+        }
+      ],
+      "D": [
+        {
+          "id": 9,
+          "spell": "dalian",
+          "name": "丹麦"
+        },
+        {
+          "id": 10,
+          "spell": "dongguan",
+          "name": "多米尼加"
+        }
+      ],
+      "E": [
+        {
+          "id": 111,
+          "spell": "eerduosi",
+          "name": "埃及"
+        },
+        {
+          "id": 112,
+          "spell": "enshi",
+          "name": "埃及"
+        },
+        {
+          "id": 113,
+          "spell": "ezhou",
+          "name": "埃及"
+        },
+        {
+          "id": 417,
+          "spell": "enping",
+          "name": "埃及"
+        }
+      ],
+      "F": [
+        {
+          "id": 11,
+          "spell": "foshan",
+          "name": "法国"
+        },
+        {
+          "id": 12,
+          "spell": "fuzhou",
+          "name": "芬兰"
+        },
+        {
+          "id": 114,
+          "spell": "fangchenggang",
+          "name": "法国"
+        },
+        {
+          "id": 115,
+          "spell": "fushun",
+          "name": "法国"
+        }
+      ],
+      "G": [
+        {
+          "id": 13,
+          "spell": "guangzhou",
+          "name": "德国"
+        },
+        {
+          "id": 14,
+          "spell": "guiyang",
+          "name": "德国"
+        },
+        {
+          "id": 119,
+          "spell": "gannan",
+          "name": "德国"
+        },
+        {
+          "id": 120,
+          "spell": "ganzhou",
+          "name": "德国"
+        },
+        {
+          "id": 121,
+          "spell": "ganzi",
+          "name": "德国"
+        },
+        {
+          "id": 122,
+          "spell": "guangan",
+          "name": "德国"
+        },
+        {
+          "id": 123,
+          "spell": "guangyuan",
+          "name": "德国"
+        },
+        {
+          "id": 124,
+          "spell": "guigang",
+          "name": "德国"
+        },
+        {
+          "id": 125,
+          "spell": "guilin",
+          "name": "德国"
+        },
+        {
+          "id": 126,
+          "spell": "guoluo",
+          "name": "德国"
+        },
+        {
+          "id": 127,
+          "spell": "guyuan",
+          "name": "德国"
+        }
+      ],
+      "H": [
+        {
+          "id": 15,
+          "spell": "haerbin",
+          "name": "海地"
+        },
+        {
+          "id": 16,
+          "spell": "haikou",
+          "name": "希腊"
+        },
+        {
+          "id": 17,
+          "spell": "handan",
+          "name": "幸福岛"
+        },
+        {
+          "id": 18,
+          "spell": "hangzhou",
+          "name": "洪都拉斯"
+        },
+        {
+          "id": 19,
+          "spell": "hefei",
+          "name": "匈牙利"
+        }
+      ],
+      "I": [
+        {
+          "id": 666,
+          "spell": "hefei",
+          "name": "印度"
+        },
+        {
+          "id": 667,
+          "spell": "hefei",
+          "name": "印度尼西亚"
+        },
+        {
+          "id": 668,
+          "spell": "hefei",
+          "name": "伊朗"
+        },
+        {
+          "id": 669,
+          "spell": "hefei",
+          "name": "意大利"
+        },
+        {
+          "id": 670,
+          "spell": "hefei",
+          "name": "爱尔兰"
+        }
+      ],
+      "J": [
+        {
+          "id": 21,
+          "spell": "jiaozuo",
+          "name": "牙买加"
+        },
+        {
+          "id": 22,
+          "spell": "jiaxing",
+          "name": "日本"
+        },
+        {
+          "id": 23,
+          "spell": "jilin",
+          "name": "约旦"
+        }
+      ],
+      "K": [
+        {
+          "id": 25,
+          "spell": "kunming",
+          "name": "朝鲜"
+        },
+        {
+          "id": 174,
+          "spell": "kaifeng",
+          "name": "韩国"
+        },
+        {
+          "id": 175,
+          "spell": "kashidi",
+          "name": "肯尼亚"
+        }
+      ],
+      "L": [
+        {
+          "id": 26,
+          "spell": "lanzhou",
+          "name": "老挝"
+        },
+        {
+          "id": 27,
+          "spell": "liuzhou",
+          "name": "利比亚"
+        },
+        {
+          "id": 28,
+          "spell": "luoyang",
+          "name": "黎巴嫩"
+        },
+        {
+          "id": 178,
+          "spell": "laibin",
+          "name": "卢森堡"
+        },
+        {
+          "id": 179,
+          "spell": "laiwu",
+          "name": "利比里亚"
+        }
+      ],
+      "M": [
+        {
+          "id": 203,
+          "spell": "maanshan",
+          "name": "墨西哥"
+        },
+        {
+          "id": 204,
+          "spell": "maoming",
+          "name": "墨西哥"
+        },
+        {
+          "id": 205,
+          "spell": "meishan",
+          "name": "墨西哥"
+        },
+        {
+          "id": 206,
+          "spell": "meizhou",
+          "name": "墨西哥"
+        },
+        {
+          "id": 207,
+          "spell": "mianyang",
+          "name": "墨西哥"
+        },
+        {
+          "id": 208,
+          "spell": "mudanjiang",
+          "name": "墨西哥"
+        },
+        {
+          "id": 628,
+          "spell": "mashan",
+          "name": "墨西哥"
+        },
+        {
+          "id": 629,
+          "spell": "meixian",
+          "name": "墨西哥"
+        },
+        {
+          "id": 630,
+          "spell": "mengcheng",
+          "name": "墨西哥"
+        },
+        {
+          "id": 631,
+          "spell": "mengjin",
+          "name": "墨西哥"
+        },
+        {
+          "id": 632,
+          "spell": "mengyin",
+          "name": "墨西哥"
+        },
+        {
+          "id": 633,
+          "spell": "mengzhou",
+          "name": "墨西哥"
+        },
+        {
+          "id": 634,
+          "spell": "mingguang",
+          "name": "墨西哥"
+        },
+        {
+          "id": 635,
+          "spell": "mingxi",
+          "name": "墨西哥"
+        },
+        {
+          "id": 636,
+          "spell": "minhou",
+          "name": "墨西哥"
+        },
+        {
+          "id": 637,
+          "spell": "minqing",
+          "name": "墨西哥"
+        },
+        {
+          "id": 638,
+          "spell": "mulan",
+          "name": "墨西哥"
+        }
+      ],
+      "N": [
+        {
+          "id": 29,
+          "spell": "nanchang",
+          "name": "挪威"
+        },
+        {
+          "id": 30,
+          "spell": "nanjing",
+          "name": "挪威"
+        },
+        {
+          "id": 31,
+          "spell": "nanning",
+          "name": "挪威"
+        },
+        {
+          "id": 32,
+          "spell": "nantong",
+          "name": "挪威"
+        },
+        {
+          "id": 33,
+          "spell": "ningbo",
+          "name": "挪威"
+        },
+        {
+          "id": 209,
+          "spell": "nanchong",
+          "name": "挪威"
+        },
+        {
+          "id": 210,
+          "spell": "nanping",
+          "name": "挪威"
+        },
+        {
+          "id": 211,
+          "spell": "nanyang",
+          "name": "挪威"
+        },
+        {
+          "id": 212,
+          "spell": "naqu",
+          "name": "挪威"
+        }
+      ],
+      "O": [
+        {
+          "id": 999,
+          "spell": "naqu",
+          "name": "阿曼"
+        }
+      ],
+      "P": [
+        {
+          "id": 216,
+          "spell": "panjin",
+          "name": "葡萄牙"
+        },
+        {
+          "id": 217,
+          "spell": "panzhihua",
+          "name": "葡萄牙"
+        },
+        {
+          "id": 218,
+          "spell": "pingdingshan",
+          "name": "葡萄牙"
+        },
+        {
+          "id": 219,
+          "spell": "pingliang",
+          "name": "葡萄牙"
+        },
+        {
+          "id": 220,
+          "spell": "pingxiang",
+          "name": "葡萄牙"
+        },
+        {
+          "id": 221,
+          "spell": "puer",
+          "name": "葡萄牙"
+        },
+        {
+          "id": 222,
+          "spell": "putian",
+          "name": "葡萄牙"
+        },
+        {
+          "id": 223,
+          "spell": "puyang",
+          "name": "葡萄牙"
+        },
+        {
+          "id": 656,
+          "spell": "panan",
+          "name": "葡萄牙"
+        },
+        {
+          "id": 657,
+          "spell": "panshi",
+          "name": "葡萄牙"
+        },
+        {
+          "id": 658,
+          "spell": "peixian",
+          "name": "葡萄牙"
+        }
+      ],
+      "R": [
+        {
+          "id": 235,
+          "spell": "rikaze",
+          "name": "卢旺达"
+        },
+        {
+          "id": 236,
+          "spell": "rizhao",
+          "name": "卢旺达"
+        },
+        {
+          "id": 705,
+          "spell": "raoping",
+          "name": "卢旺达"
+        },
+        {
+          "id": 706,
+          "spell": "renhua",
+          "name": "卢旺达"
+        }
+      ],
+      "S": [
+        {
+          "id": 3,
+          "spell": "shanghai",
+          "name": "苏丹"
+        },
+        {
+          "id": 36,
+          "spell": "shenyang",
+          "name": "苏丹"
+        },
+        {
+          "id": 37,
+          "spell": "shenzhen",
+          "name": "苏丹"
+        },
+        {
+          "id": 38,
+          "spell": "shijiazhuang",
+          "name": "苏丹"
+        },
+        {
+          "id": 39,
+          "spell": "suzhou",
+          "name": "苏丹"
+        },
+        {
+          "id": 237,
+          "spell": "sanmenxia",
+          "name": "苏丹"
+        },
+        {
+          "id": 238,
+          "spell": "sanming",
+          "name": "苏丹"
+        },
+        {
+          "id": 239,
+          "spell": "sanya",
+          "name": "苏丹"
+        },
+        {
+          "id": 240,
+          "spell": "shangluo",
+          "name": "苏丹"
+        },
+        {
+          "id": 241,
+          "spell": "shangqiu",
+          "name": "苏丹"
+        },
+        {
+          "id": 242,
+          "spell": "shangrao",
+          "name": "苏丹"
+        },
+        {
+          "id": 243,
+          "spell": "shannan",
+          "name": "苏丹"
+        },
+        {
+          "id": 244,
+          "spell": "shantou",
+          "name": "苏丹"
+        },
+        {
+          "id": 245,
+          "spell": "shanwei",
+          "name": "苏丹"
+        },
+        {
+          "id": 246,
+          "spell": "shaoguan",
+          "name": "苏丹"
+        },
+        {
+          "id": 247,
+          "spell": "shaoxing",
+          "name": "苏丹"
+        },
+        {
+          "id": 248,
+          "spell": "shaoyang",
+          "name": "苏丹"
+        },
+        {
+          "id": 249,
+          "spell": "shiyan",
+          "name": "苏丹"
+        },
+        {
+          "id": 250,
+          "spell": "shizuishan",
+          "name": "苏丹"
+        }
+      ],
+      "T": [
+        {
+          "id": 4,
+          "spell": "tianjin",
+          "name": "土耳其"
+        },
+        {
+          "id": 40,
+          "spell": "taizhou",
+          "name": "土耳其"
+        },
+        {
+          "id": 41,
+          "spell": "tangshan",
+          "name": "土耳其"
+        },
+        {
+          "id": 260,
+          "spell": "tachengdi",
+          "name": "土耳其"
+        },
+        {
+          "id": 261,
+          "spell": "taian",
+          "name": "土耳其"
+        },
+        {
+          "id": 262,
+          "spell": "taiyuan",
+          "name": "土耳其"
+        },
+        {
+          "id": 263,
+          "spell": "taizhou",
+          "name": "土耳其"
+        },
+        {
+          "id": 264,
+          "spell": "tianshui",
+          "name": "土耳其"
+        },
+        {
+          "id": 265,
+          "spell": "tieling",
+          "name": "土耳其"
+        },
+        {
+          "id": 266,
+          "spell": "tongchuan",
+          "name": "土耳其"
+        },
+        {
+          "id": 267,
+          "spell": "tonghua",
+          "name": "土耳其"
+        },
+        {
+          "id": 268,
+          "spell": "tongliao",
+          "name": "土耳其"
+        },
+        {
+          "id": 269,
+          "spell": "tongling",
+          "name": "土耳其"
+        },
+        {
+          "id": 270,
+          "spell": "tongren",
+          "name": "土耳其"
+        },
+        {
+          "id": 271,
+          "spell": "tulufan",
+          "name": "土耳其"
+        },
+        {
+          "id": 771,
+          "spell": "taicang",
+          "name": "土耳其"
+        },
+        {
+          "id": 772,
+          "spell": "taihe",
+          "name": "土耳其"
+        },
+        {
+          "id": 773,
+          "spell": "taihe",
+          "name": "土耳其"
+        },
+        {
+          "id": 774,
+          "spell": "taihu",
+          "name": "土耳其"
+        },
+        {
+          "id": 775,
+          "spell": "taining",
+          "name": "土耳其"
+        },
+        {
+          "id": 776,
+          "spell": "taishan",
+          "name": "土耳其"
+        },
+        {
+          "id": 777,
+          "spell": "taishun",
+          "name": "土耳其"
+        },
+        {
+          "id": 778,
+          "spell": "taixing",
+          "name": "土耳其"
+        },
+        {
+          "id": 779,
+          "spell": "tancheng",
+          "name": "土耳其"
+        },
+        {
+          "id": 780,
+          "spell": "tanghai",
+          "name": "土耳其"
+        },
+        {
+          "id": 781,
+          "spell": "tengzhou",
+          "name": "土耳其"
+        }
+      ],
+      "U": [
+        {
+          "id": 42,
+          "spell": "weifang",
+          "name": "英国"
+        },
+        {
+          "id": 43,
+          "spell": "weihai",
+          "name": "英国"
+        },
+        {
+          "id": 44,
+          "spell": "wuhan",
+          "name": "英国"
+        },
+        {
+          "id": 45,
+          "spell": "wuxi",
+          "name": "英国"
+        },
+        {
+          "id": 272,
+          "spell": "weinan",
+          "name": "英国"
+        },
+        {
+          "id": 273,
+          "spell": "wenshan",
+          "name": "英国"
+        }
+      ],
+      "V": [
+        {
+          "id": 46,
+          "spell": "xiamen",
+          "name": "越南"
+        },
+        {
+          "id": 47,
+          "spell": "xian",
+          "name": "越南"
+        }
+      ],
+      "Y": [
+        {
+          "id": 50,
+          "spell": "yangzhou",
+          "name": "也门共和国"
+        }
+      ],
+      "Z": [
+        {
+          "id": 52,
+          "spell": "zhangzhou",
+          "name": "赞比亚"
+        },
+        {
+          "id": 53,
+          "spell": "zhengzhou",
+          "name": "津巴布韦"
+        }
+      ]
     }
   }
 }

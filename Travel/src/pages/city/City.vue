@@ -2,8 +2,7 @@
   <div class="city">
     <city-header></city-header>
     <city-tab @showAbroad="showAbroad"></city-tab>
-    <city-list :cities="cities" :hot="hotCities" :class="{hide: isShowAbroad}"></city-list>
-    <city-list :cities="cities" :hot="hotCities" :class="{hide: !isShowAbroad}"></city-list>
+    <city-list :cities="citiesPart" :hot="hot"></city-list>
   </div>
 </template>
 
@@ -26,9 +25,27 @@ export default {
   data () {
     return {
       cities: {},
+      citiesAbroad: {},
       hotCities: [],
+      hotCitiesAbroad: [],
       letter: '',
       isShowAbroad: false
+    }
+  },
+  computed: {
+    hot () {
+      if (this.isShowAbroad) {
+        return this.hotCitiesAbroad
+      } else {
+        return this.hotCities
+      }
+    },
+    citiesPart () {
+      if (this.isShowAbroad) {
+        return this.citiesAbroad
+      } else {
+        return this.cities
+      }
     }
   },
   methods: {
@@ -41,7 +58,9 @@ export default {
       if (res.ret && res.data) {
         const data = res.data
         this.cities = data.cities
+        this.citiesAbroad = data.citiesAbroad
         this.hotCities = data.hotCities
+        this.hotCitiesAbroad = data.hotCitiesAbroad
       }
     },
     handleLetterChange (letter) {
