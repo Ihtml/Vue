@@ -1,6 +1,8 @@
 <template>
   <div class="list" ref="wrapper">
     <div>
+      <hot-city></hot-city>
+      <city-alphabet :cities="cities"></city-alphabet>
       <div class="area" v-for="(item, key) of cities" :key="key" :ref="key">
         <div class="title">{{key}}</div>
         <ul class="item-list">
@@ -16,8 +18,14 @@
 <script>
 import Bscroll from 'better-scroll'
 import { mapState, mapMutations } from 'vuex'
+import HotCity from './HotCityList'
+import CityAlphabet from './Alphabet'
 export default {
   name: 'CityList',
+  components: {
+    HotCity,
+    CityAlphabet
+  },
   props: {
     cities: Object,
     hot: Array,
@@ -53,6 +61,14 @@ export default {
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl'
 @import '~styles/mixins.styl'
+.list
+  overflow hidden
+  position absolute
+  top 1.48rem
+  left 0
+  right 0
+  bottom 0
+  background #f5f5f5
 .title
   font-size 0.24rem
   margin 0.24rem 0.3rem

@@ -2,8 +2,6 @@
   <div class="city">
     <city-header></city-header>
     <city-tab></city-tab>
-    <hot-city></hot-city>
-    <city-alphabet :cities="cities"></city-alphabet>
     <city-list :cities="cities"></city-list>
   </div>
 </template>
