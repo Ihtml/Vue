@@ -2,7 +2,7 @@
   <div class="list" ref="wrapper">
     <div>
       <hot-city :hot="hot" @changeCity="handleCityClick"></hot-city>
-      <city-alphabet :cities="cities"></city-alphabet>
+      <city-alphabet :cities="cities" @change="handleLetterChange"></city-alphabet>
       <div class="area" v-for="(item, key) of cities" :key="key" :ref="key">
         <div class="title">{{key}}</div>
         <ul class="item-list">
@@ -26,10 +26,14 @@ export default {
     HotCity,
     CityAlphabet
   },
+  data () {
+    return {
+      letter: ''
+    }
+  },
   props: {
     cities: Object,
-    hot: Array,
-    letter: String
+    hot: Array
   },
   computed: {
     ...mapState({
@@ -41,6 +45,9 @@ export default {
     handleCityClick (city) {
       this.changeCity(city)
       this.$router.push('/')
+    },
+    handleLetterChange (letter) {
+      this.letter = letter
     }
   },
   mounted () {
