@@ -17,15 +17,19 @@ export default {
   },
   methods: {
     switchInBorder () {
+      this.$emit('showAbroad', false)
       if (this.isInBorder) {
       } else {
         this.isInBorder = true
       }
     },
     switchAbroad () {
+      this.$emit('showAbroad', true)
       if (this.isInBorder) {
-        this.isInBorder = false
-      } else {
+        if (this.isInBorder) {
+          this.isInBorder = false
+        } else {
+        }
       }
     }
   }

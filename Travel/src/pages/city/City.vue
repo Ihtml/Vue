@@ -1,8 +1,9 @@
 <template>
   <div class="city">
     <city-header></city-header>
-    <city-tab></city-tab>
-    <city-list :cities="cities" :hot="hotCities"></city-list>
+    <city-tab @showAbroad="showAbroad"></city-tab>
+    <city-list :cities="cities" :hot="hotCities" :class="{hide: isShowAbroad}"></city-list>
+    <city-list :cities="cities" :hot="hotCities" :class="{hide: !isShowAbroad}"></city-list>
   </div>
 </template>
 
@@ -26,7 +27,8 @@ export default {
     return {
       cities: {},
       hotCities: [],
-      letter: ''
+      letter: '',
+      isShowAbroad: false
     }
   },
   methods: {
@@ -44,6 +46,13 @@ export default {
     },
     handleLetterChange (letter) {
       this.letter = letter
+    },
+    showAbroad (flag) {
+      if (flag) {
+        this.isShowAbroad = true
+      } else {
+        this.isShowAbroad = false
+      }
     }
   },
   mounted () {
@@ -58,4 +67,6 @@ export default {
   line-height 1
   color #212121
   font-size 0.28rem
+.hide
+  display none
 </style>
