@@ -1,7 +1,7 @@
 <template>
   <div class="list" ref="wrapper">
     <div>
-      <hot-city></hot-city>
+      <hot-city :hot="hot" @changeCity="handleCityClick"></hot-city>
       <city-alphabet :cities="cities"></city-alphabet>
       <div class="area" v-for="(item, key) of cities" :key="key" :ref="key">
         <div class="title">{{key}}</div>

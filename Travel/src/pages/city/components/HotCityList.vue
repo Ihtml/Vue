@@ -2,30 +2,30 @@
   <div class="hot-city">
     <div class="hot-city-title">热门城市</div>
     <ul class="hot-city-list">
-      <li>北京</li>
-      <li>上海</li>
-      <li>三亚</li>
-      <li>香港</li>
-      <li>杭州</li>
-      <li>广州</li>
-      <li>成都</li>
-      <li>深圳</li>
-      <li>苏州</li>
-      <li>厦门</li>
+      <li v-for="item of hot" :key="item.id" @click="handleCityClick(item.name)">{{item.name}}</li>
     </ul>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HotCityList'
+  name: 'HotCityList',
+  props: {
+    hot: Array
+  },
+  methods: {
+    handleCityClick (city) {
+      this.$emit('changeCity', city)
+    }
+  }
 }
 </script>
 
 <style lang="stylus" scoped>
 .hot-city-title
   font-size 0.24rem
-  margin 0.48rem 0.3rem 0.24rem
+  line-height 0.72rem
+  padding-left 0.3rem
 .hot-city-list
   position relative
   overflow hidden

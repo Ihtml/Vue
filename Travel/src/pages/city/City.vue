@@ -2,7 +2,7 @@
   <div class="city">
     <city-header></city-header>
     <city-tab></city-tab>
-    <city-list :cities="cities"></city-list>
+    <city-list :cities="cities" :hot="hotCities"></city-list>
   </div>
 </template>
 
